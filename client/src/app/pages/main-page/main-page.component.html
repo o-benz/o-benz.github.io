@@ -2,18 +2,13 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="card-container">
-      <div class="card" [ngStyle]="cardStyles">
+      <div class="card" [ngClass]="{'flipped': isFlipped}" [ngStyle]="cardStyles" (click)="flipCard()">
         <div class="card-side card-front">
-          <!-- <h1>Omar Benzekri</h1>
-          <p>Computer Engineering Student</p>
-          <p>Data Engineering Analyst</p>
-          <p>CSS King</p> -->
         </div>
         <div class="card-side card-back">
-          <p>
-            Passionate about technology and innovation, I specialize in creating
-            robust software solutions and optimizing data processes.
-          </p>
+          <h1>
+            Also known as the CSS King
+          </h1>
         </div>
       </div>
     </div>
@@ -61,6 +56,23 @@
       <div class="skill-item" *ngFor="let skill of skills">
         <h4>{{ skill.name }}</h4>
         <p>{{ skill.level }}</p>
+      </div>
+    </div>
+  </section>
+
+    <!-- Interests Section -->
+  <section class="interests">
+    <h2 class="interest-title">Interests</h2>
+    <div class="interest-list">
+      <div class="interest-item" *ngFor="let interest of interests">
+        <div class="animation-container">
+          <video width="200" height="175" autoplay loop muted>
+            <source [src]="interest.animation" type="video/webm">
+          </video>
+        </div>
+        <div class="description">
+          <h2 class="interest-titles">{{ interest.name }}</h2>
+        </div>
       </div>
     </div>
   </section>

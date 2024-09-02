@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class MainPageComponent {
   cardStyles = {};
+  isFlipped = false;
   experiences = [
     {
       title: 'Data Engineering Analyst',
@@ -101,6 +102,15 @@ export class MainPageComponent {
     { name: 'Tableau', level: 'Intermediate' }
   ];
 
+  interests = [
+    { name: 'Martial Arts', animation: '../../../assets/boxing.webm'},
+    { name: 'Music', animation: '../../../assets/guitarist.webm'},
+    { name: 'Running', animation: '../../../assets/running.webm'},
+    { name: 'Teaching', animation: '../../../assets/teaching.webm'},
+    { name: 'Working Out', animation: '../../../assets/gym.webm'},
+    { name: 'Football', animation: '../../../assets/football.webm'}
+  ];
+
   contactForm = {
     name: '',
     email: '',
@@ -122,17 +132,20 @@ export class MainPageComponent {
     const rotateY = (event.clientX - centerX) / 20;
 
     this.cardStyles = {
-      transform: `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`
+      transform: `rotateX(${rotateX}deg) rotateY(${rotateY + (this.isFlipped ? 180 : 0)}deg)`
     };
   }
 
   resetCardPosition(): void {
     this.cardStyles = {
-      transform: `rotateX(0) rotateY(0)`
+      transform: `rotateX(0) rotateY(${this.isFlipped ? 180 : 0}deg)`
     };
   }
 
-  // onSubmit() {
-  //   alert(`Message sent by ${this.contactForm.name}`);
-  // }
+  flipCard(): void {
+    this.isFlipped = !this.isFlipped;
+    this.cardStyles = {
+      transform: `rotateX(0) rotateY(${this.isFlipped ? 180 : 0}deg)`
+    };
+  }
 }

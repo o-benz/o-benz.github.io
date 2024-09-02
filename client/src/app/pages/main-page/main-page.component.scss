@@ -15,7 +15,6 @@ body {
 
 h2 {
   text-align: center;
-  margin-bottom: 20px;
   font-size: 2rem;
   color: $primary-color;
 }
@@ -43,6 +42,18 @@ h2 {
   background-size: 300% 300%;
   background-repeat: no-repeat;
   animation: gradientAnimation 12s ease infinite;
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+h1 {
+  color: white;
+  text-shadow: 
+    1px 1px 2px black, 
+    0 0 25px rgb(116, 12, 213), 
+    0 0 5px darkblue;
 }
 
 @media (max-width: 650px) {
@@ -123,7 +134,7 @@ h2 {
   background: white;
   border-left: 4px solid $primary-color;
   position: relative;
-  width: 60%;
+  width: 80%;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -151,7 +162,7 @@ h2 {
 }
 
 .projects {
-  padding: 50px 0;
+  padding: 15px 0;
   background: $dark-color;
   color: white;
 }
@@ -199,6 +210,10 @@ h2 {
   transform: scale(1.05);
 }
 
+.carousel-item:active {
+  transform: scale(0.95);
+}
+
 .carousel-content {
   text-decoration: none;
   color: white;
@@ -223,7 +238,7 @@ h2 {
 
 /* Skills Section */
 .skills {
-  padding: 50px 0;
+  padding: 15px 0;
   background: $light-color;
 }
 
@@ -255,6 +270,52 @@ h2 {
   border-radius: 10px;
   min-width: 140px;
   text-align: center;
+}
+
+/* Interests Section */
+.interests {
+  background-color: #957ece;
+  padding: 15px;
+}
+
+.interest-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+  overflow-x: scroll;
+}
+
+.interest-list::-webkit-scrollbar {
+  width: 12px;
+}
+
+.interest-list::-webkit-scrollbar-thumb {
+  background-color: #a88bc3;
+  border-radius: 15px;
+}
+.interest-list::-webkit-scrollbar-thumb:active {
+  background-color: #4d3f5a;
+}
+
+.interest-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &:nth-child(2n) {
+    flex-direction: column-reverse;
+  }
+}
+
+.interest-title {
+  color: #0a014e;
+}
+
+.interest-titles {
+  color: #0a014e;
+  font-size: 1.5em;
 }
 
 /* Contact Section */

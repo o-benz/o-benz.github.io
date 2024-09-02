@@ -1,0 +1,134 @@
+<div class="portfolio-container" (mousemove)="onMouseMove($event)">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="card-container">
+      <div class="card" [ngStyle]="cardStyles">
+        <div class="card-side card-front">
+          <!-- <h1>Omar Benzekri</h1>
+          <p>Computer Engineering Student</p>
+          <p>Data Engineering Analyst</p>
+          <p>CSS King</p> -->
+        </div>
+        <div class="card-side card-back">
+          <p>
+            Passionate about technology and innovation, I specialize in creating
+            robust software solutions and optimizing data processes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section class="experience">
+    <h2>Experience</h2>
+    <div class="timeline">
+      <div class="timeline-item" *ngFor="let exp of experiences">
+        <h3>{{ exp.title }}</h3>
+        <div class="line">
+          <div>{{ exp.company }}</div>
+          <div>{{ exp.duration }}</div>
+        </div>
+        <div class="details">
+          <p>{{ exp.BP1 }}</p>
+          <p>{{ exp.BP2 }}</p>
+          <p>{{ exp.BP3 }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="projects">
+    <h2 class="project">Projects</h2>
+    <div class="carousel">
+      <div *ngFor="let project of projects">
+        <a  [href]="project.link" class="carousel-item">
+          <div class="carousel-content">
+            <h3 class="project-title">{{ project.title }}</h3>
+            <img [src]="project.logo" alt="{{ project.title }} Logo" class="project-logo" />
+            <!-- <p>{{ project.description }}</p> -->
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="skills">
+    <h2>Skills & Tools</h2>
+    <div class="skill-list">
+      <div class="skill-item" *ngFor="let skill of skills">
+        <h4>{{ skill.name }}</h4>
+        <p>{{ skill.level }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <!-- <h2>Contact</h2> -->
+    <div class="social-media-wrapper">
+      <ul>
+        <li class="github-link">
+          <a
+            href="https://github.com/o-benz"
+            target="_blank"
+            title="GitHub Profile"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              role="img"
+              width="30"
+              height="30"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M12 0C5.373 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.385.6.111.82-.26.82-.577v-2.041c-3.338.726-4.033-1.415-4.033-1.415-.546-1.387-1.333-1.757-1.333-1.757-1.09-.745.083-.729.083-.729 1.204.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.109-.775.419-1.305.762-1.605-2.666-.303-5.467-1.333-5.467-5.933 0-1.311.469-2.381 1.236-3.221-.123-.303-.536-1.522.117-3.176 0 0 1.008-.322 3.301 1.231.957-.266 1.984-.398 3.005-.403 1.021.005 2.049.137 3.008.403 2.289-1.553 3.295-1.231 3.295-1.231.656 1.654.243 2.873.12 3.176.77.84 1.234 1.911 1.234 3.221 0 4.61-2.807 5.625-5.479 5.921.43.372.823 1.103.823 2.222v3.293c0 .32.217.694.827.576C20.565 21.795 24 17.298 24 12c0-6.627-5.373-12-12-12z"
+              ></path>
+            </svg>
+          </a>
+        </li>
+        <li class="linkedin-link">
+          <a
+            href="https://www.linkedin.com/in/omar-benzekri1/"
+            target="_blank"
+            title="Linkedin Profile"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
+              role="img"
+              width="28"
+              height="27.28"
+              preserveAspectRatio="xMidYMid meet"
+              viewBox="0 0 25 24"
+            >
+              <path
+                fill="currentColor"
+                d="M5.706 7.798V24H.311V7.798zm.343-5.002l.002.098c0 .749-.318 1.423-.826 1.895l-.002.001A3.067 3.067 0 0 1 3 5.59h.007h-.033a2.945 2.945 0 0 1-2.162-.801l.001.001a2.67 2.67 0 0 1-.815-1.998v.004l-.001-.069c0-.762.324-1.448.841-1.929L.84.797A3.066 3.066 0 0 1 3.045.001h-.006a2.983 2.983 0 0 1 2.177.795L5.214.794a2.72 2.72 0 0 1 .835 1.964V2.8v-.002zm19.062 11.92V24h-5.378v-8.665a4.702 4.702 0 0 0-.675-2.71l.012.021a2.325 2.325 0 0 0-2.076-.972h.008a2.634 2.634 0 0 0-1.73.568l.006-.004a3.494 3.494 0 0 0-1.032 1.375l-.008.023a3.862 3.862 0 0 0-.179 1.331v-.007v9.042H8.681q.033-6.523.033-10.578t-.016-4.839L8.682 7.8h5.378v2.354h-.033c.214-.345.435-.644.678-.924l-.008.009c.281-.309.583-.588.908-.838l.016-.012a4.212 4.212 0 0 1 1.392-.704l.03-.007a6.347 6.347 0 0 1 1.797-.254h.079h-.004a5.792 5.792 0 0 1 4.493 1.851l.003.004q1.702 1.856 1.702 5.436z"
+              ></path>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- <div class="contact-form">
+      <form (ngSubmit)="onSubmit()">
+        <label for="name">Name</label>
+        <input type="text" id="name" [(ngModel)]="contactForm.name" name="name" required />
+        
+        <label for="email">Email</label>
+        <input type="email" id="email" [(ngModel)]="contactForm.email" name="email" required />
+        
+        <label for="message">Message</label>
+        <textarea id="message" [(ngModel)]="contactForm.message" name="message" required></textarea>
+        
+        <button type="submit">Send</button>
+      </form>
+    </div> -->
+  </section>
+</div>

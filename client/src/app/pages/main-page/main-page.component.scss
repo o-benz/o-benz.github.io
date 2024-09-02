@@ -14,9 +14,51 @@ body {
 }
 
 h2 {
+  user-select: none;
   text-align: center;
   font-size: 2rem;
   color: $primary-color;
+}
+
+.wiggly-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  h2 {
+    margin: 0;
+    padding-bottom: 10px;
+  }
+
+  .wiggly-line {
+    width: 200px;
+    height: 4px;
+    background: none;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .wiggly-line::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, black, transparent);
+    animation: wiggle 2s linear infinite;
+  }
+
+  @keyframes wiggle {
+    0% {
+      transform: translateX(-100%);
+    }
+    50% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
 }
 
 @keyframes gradientAnimation {
@@ -64,7 +106,12 @@ h1 {
   }
 
   .card-front {
-    background-image: url(../../../assets/css-king.png) !important; 
+    background-image: url(../../../assets/css-king.png) !important;
+    background-color: $primary-color;
+  }
+  
+  h1 {
+    font-size: larger;
   }
 }
 
@@ -118,7 +165,7 @@ h1 {
 
 /* Experience Section */
 .experience {
-  padding: 50px 0;
+  padding: 15px 0;
   background: $light-color;
 }
 
@@ -190,9 +237,8 @@ h1 {
 }
 
 .carousel-item {
+  user-select: none;
   text-decoration: none;
-  height: 200px;
-  width: 200px;
   background: $primary-color;
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -203,11 +249,15 @@ h1 {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  transition: transform $transition-time ease;
+  transition: all $transition-time ease;
+  text-decoration: none;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: thin white;
 }
 
 .carousel-item:hover {
   transform: scale(1.05);
+  -webkit-text-fill-color: white;
 }
 
 .carousel-item:active {
@@ -275,7 +325,40 @@ h1 {
 /* Interests Section */
 .interests {
   background-color: #957ece;
-  padding: 15px;
+  padding: 15px 0;
+}
+
+.interest-animation {
+  border-radius: 50%;
+  overflow: hidden;
+  opacity: 0;
+  position: absolute;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.interest-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.interest-visual {
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 .interest-list {
@@ -284,6 +367,8 @@ h1 {
   align-items: center;
   gap: 15px;
   overflow-x: scroll;
+  overflow-y: visible;
+  padding: 15px;
 }
 
 .interest-list::-webkit-scrollbar {
@@ -303,6 +388,15 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
+
+  &:hover .interest-image {
+    opacity: 0;
+  }
+
+  &:hover .interest-animation {
+    opacity: 1;
+  }
 
   &:nth-child(2n) {
     flex-direction: column-reverse;
@@ -317,6 +411,9 @@ h1 {
   color: #0a014e;
   font-size: 1.5em;
 }
+
+/* CSS Kingdom*/
+
 
 /* Contact Section */
 .contact {

@@ -16,7 +16,7 @@ export class MainPageComponent {
     {
       title: 'Data Engineering Analyst',
       company: 'National Bank of Canada',
-      duration: 'May 2024 – December 2024',
+      duration: 'May 2024 – Dec 2024',
       BP1: `• Manage real-time, near real-time (NRT) or batch (MFT) data ingestion processes using Kafka or AWS, ensuring availability and governance of certified data across analytical platforms utilizing proficiency in Python and SQL.`,
       BP2: `• Lead Agile ceremonies as Scrum Master, drive efficient CI/CD practices through DevOps principles, and train a new team member to full operational capacity within two weeks. Resolve 93% of data flow incidents within SLA.`,
       BP3: `• Engineer innovative solutions to streamline data ingestion workflows using Snowflake and Databricks, reducing processing times, volumes, and associated costs by nearly 30% while upholding data quality standards.`
@@ -24,15 +24,23 @@ export class MainPageComponent {
     {
       title: 'Software Engineer Intern',
       company: 'ADM Montreal Airports',
-      duration: 'May 2023 – September 2023',
+      duration: 'May 2023 - Sep 2023',
       BP1: `• Develop and implement various scripts and programs in diverse languages (Python, JS, VBA) to automate menial and repetitive tasks, resulting in a 20% increase in overall operational efficiency.`,
       BP2: `• Perform data analysis and processing using platforms such as Power BI, Jupyter, or MySQL to extract insights, identify patterns, and present findings through clear reports to support data-driven decision-making.`,
       BP3: `• Lead software projects from inception to completion, ensure seamless integration of front-end and back-end components while delivering robust solutions increasing user satisfaction by over 15%.`
     },
     {
+      title: 'Teacher Assistant',
+      company: 'Collège international Marie de France',
+      duration: 'Jan 2023 - Dec 2023',
+      BP1: `• Conduct weekly in-person lab sessions for over 40 students to reinforce key concepts in C++ and OOP.`,
+      BP2: `• Grade assignments, quizzes and exams, providing detailed feedback to students on their performance.`,
+      BP3: `• Provide code debugging and troubleshooting assistance to students during and outside of office hours.`
+    },
+    {
       title: 'Coding Instructor',
       company: 'Collège international Marie de France',
-      duration: 'September 2020 – Present',
+      duration: 'Sep 2020 - Present',
       BP1: `• Teach the basics of programming and computer science to a group of 30 young students.`,
       BP2: `• Design a fun and complete curriculum to foster curiosity and interest in a software-related career.`,
       BP3: `• Develop interactive coding projects and exercises tailored to enhance problem-solving skills and creativity.`
@@ -103,12 +111,11 @@ export class MainPageComponent {
   ];
 
   interests = [
-    { name: 'Martial Arts', animation: '../../../assets/boxing.webm'},
-    { name: 'Music', animation: '../../../assets/guitarist.webm'},
-    { name: 'Running', animation: '../../../assets/running.webm'},
-    { name: 'Teaching', animation: '../../../assets/teaching.webm'},
-    { name: 'Working Out', animation: '../../../assets/gym.webm'},
-    { name: 'Football', animation: '../../../assets/football.webm'}
+    { name: 'Martial Arts', animation: '../../../assets/boxing.mp4', image: '../../../assets/boxing.png' },
+    { name: 'Music', animation: '../../../assets/music.mp4', image: '../../../assets/music.png' },
+    { name: 'Running', animation: '../../../assets/running.mp4', image: '../../../assets/running.png' },
+    { name: 'Working Out', animation: '../../../assets/gym.mp4', image: '../../../assets/gym.png' },
+    { name: 'Friends & Family', animation: '../../../assets/friends_family.mp4', image: '../../../assets/friends_family.png' }
   ];
 
   contactForm = {
@@ -147,5 +154,16 @@ export class MainPageComponent {
     this.cardStyles = {
       transform: `rotateX(0) rotateY(${this.isFlipped ? 180 : 0}deg)`
     };
+  }
+
+  playVideo(event: Event) {
+    const video = event.target as HTMLVideoElement;
+    video.muted = true;
+    video.play();
+  }
+
+  pauseVideo(event: Event) {
+    const video = event.target as HTMLVideoElement;
+    video.pause();
   }
 }

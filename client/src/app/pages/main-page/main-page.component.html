@@ -7,7 +7,7 @@
         </div>
         <div class="card-side card-back">
           <h1>
-            Also known as the CSS King
+            also known as the CSS King
           </h1>
         </div>
       </div>
@@ -16,7 +16,10 @@
 
   <!-- Experience Section -->
   <section class="experience">
-    <h2>Experience</h2>
+    <div class="wiggly-container">
+      <h2>Experience</h2>
+      <div class="wiggly-line"></div>
+    </div>
     <div class="timeline">
       <div class="timeline-item" *ngFor="let exp of experiences">
         <h3>{{ exp.title }}</h3>
@@ -35,7 +38,10 @@
 
   <!-- Projects Section -->
   <section class="projects">
-    <h2 class="project">Projects</h2>
+    <div class="wiggly-container">
+      <h2 class="project">Projects</h2>
+      <div class="wiggly-line"></div>
+    </div>
     <div class="carousel">
       <div *ngFor="let project of projects">
         <a  [href]="project.link" class="carousel-item">
@@ -51,7 +57,10 @@
 
   <!-- Skills Section -->
   <section class="skills">
-    <h2>Skills & Tools</h2>
+    <div class="wiggly-container">
+      <h2>Technical Skills</h2>
+      <div class="wiggly-line"></div>
+    </div>
     <div class="skill-list">
       <div class="skill-item" *ngFor="let skill of skills">
         <h4>{{ skill.name }}</h4>
@@ -60,22 +69,43 @@
     </div>
   </section>
 
-    <!-- Interests Section -->
-  <section class="interests">
+<!-- Interests Section -->
+<section class="interests">
+  <div class="wiggly-container">
     <h2 class="interest-title">Interests</h2>
-    <div class="interest-list">
-      <div class="interest-item" *ngFor="let interest of interests">
-        <div class="animation-container">
-          <video width="200" height="175" autoplay loop muted>
-            <source [src]="interest.animation" type="video/webm">
-          </video>
-        </div>
-        <div class="description">
-          <h2 class="interest-titles">{{ interest.name }}</h2>
-        </div>
+    <div class="wiggly-line"></div>
+  </div>
+  <div class="interest-list">
+    <div class="interest-item" *ngFor="let interest of interests">
+      <div class="interest-visual">
+        <img 
+          [src]="interest.image" 
+          alt="{{interest.name}}" 
+          class="interest-image"
+          (mouseenter)="playVideo($event)"
+          (mouseleave)="pauseVideo($event)"
+        />
+        <video 
+          width="150" 
+          height="150" 
+          [attr.src]="interest.animation" 
+          type="video/mp4" 
+          class="interest-animation" 
+          loop 
+          playsInline
+          (mouseenter)="playVideo($event)"
+          (mouseleave)="pauseVideo($event)"
+        ></video>
+      </div>
+      <div class="description">
+        <h2 class="interest-titles">{{ interest.name }}</h2>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+
+  <!-- CSS Kingdom -->
 
   <!-- Contact Section -->
   <section class="contact">

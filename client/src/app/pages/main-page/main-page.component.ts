@@ -79,7 +79,7 @@ export class MainPageComponent {
     { name: 'Java', level: 'Advanced' },
     { name: 'Python', level: 'Advanced' },
     { name: 'C/C++', level: 'Advanced' },
-    { name: 'C/C++', level: 'Intermediate' },
+    { name: 'C#', level: 'Intermediate' },
     { name: 'SQL', level: 'Advanced' },
     { name: 'JS/TS', level: 'Advanced' },
     { name: 'Kotlin', level: 'Intermediate' },

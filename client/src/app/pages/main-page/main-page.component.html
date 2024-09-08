@@ -1,6 +1,11 @@
 <div class="portfolio-container" (mousemove)="onMouseMove($event)">
   <!-- Hero Section -->
   <section class="hero">
+    <div class="stars-container">
+      <div id='stars'></div>
+      <div id='stars2'></div>
+      <div id='stars3'></div>
+    </div>
     <div class="card-container">
       <div class="card" [ngClass]="{'flipped': isFlipped}" [ngStyle]="cardStyles" (click)="flipCard()">
         <div class="card-side card-front">

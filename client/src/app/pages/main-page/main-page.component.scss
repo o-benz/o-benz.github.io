@@ -31,7 +31,7 @@ h2 {
     padding-bottom: 10px;
   }
 
-  .wiggly-line {
+  .wiggly-line-experience {
     width: 200px;
     height: 4px;
     background: none;
@@ -39,12 +39,63 @@ h2 {
     overflow: hidden;
   }
 
-  .wiggly-line::before {
+  .wiggly-line-experience::before {
     content: '';
     position: absolute;
     width: 100%;
     height: 100%;
     background: linear-gradient(90deg, transparent, black, transparent);
+    animation: wiggle 2s linear infinite;
+  }
+
+  .wiggly-line-project {
+    width: 150px;
+    height: 4px;
+    background: none;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .wiggly-line-project::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, $primary-color, transparent);
+    animation: wiggle 2s linear infinite;
+  }
+
+  .wiggly-line-skills {
+    width: 267px;
+    height: 4px;
+    background: none;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .wiggly-line-skills::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, black, transparent);
+    animation: wiggle 2s linear infinite;
+  }
+
+  .wiggly-line-interests {
+    width: 163px;
+    height: 4px;
+    background: none;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .wiggly-line-interests::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgb(187, 136, 195), transparent);
     animation: wiggle 2s linear infinite;
   }
 

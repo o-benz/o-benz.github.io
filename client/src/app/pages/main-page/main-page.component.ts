@@ -1,23 +1,23 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-main-page',
   standalone: true,
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.scss'],
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule],
 })
 export class MainPageComponent {
   cardStyles = {};
   isFlipped = false;
+  isFlipping = false;
   experiences = [
     {
       title: 'Data Engineering Analyst',
       company: 'National Bank of Canada',
       duration: 'May 2024 – Dec 2024',
-      BP1: `• Manage real-time, near real-time (NRT) or batch (MFT) data ingestion processes using Kafka or AWS, ensuring availability and governance of certified data across analytical platforms utilizing proficiency in Python and SQL.`,
+      BP1: `• Manage real-time, near real-time (NRT) or batch data ingestion processes through MFT, AWS and Kafka, ensuring availability and governance of certified data across analytical platforms utilizing proficiency in Python and SQL.`,
       BP2: `• Lead Agile ceremonies as Scrum Master, drive efficient CI/CD practices through DevOps principles, and train a new team member to full operational capacity within two weeks. Resolve 93% of data flow incidents within SLA.`,
       BP3: `• Engineer innovative solutions to streamline data ingestion workflows using Snowflake and Databricks, reducing processing times, volumes, and associated costs by nearly 30% while upholding data quality standards.`
     },
@@ -64,7 +64,7 @@ export class MainPageComponent {
       link: 'https://github.com/o-benz/SmartyShowdown'
     },
     {
-      title: 'AstroBot',
+      title: 'geppetto',
       logo: '../../../assets/AstroBot.png',
       link: '#'
     },
@@ -130,6 +130,7 @@ export class MainPageComponent {
   }
 
   onMouseMove(event: MouseEvent): void {
+    if (this.isFlipping) return;
     const card = document.querySelector('.card') as HTMLElement;
     const cardRect = card.getBoundingClientRect();
     const centerX = cardRect.left + cardRect.width / 2;
@@ -149,11 +150,18 @@ export class MainPageComponent {
     };
   }
 
-  flipCard(): void {
+  async flipCard(): Promise<void> {
     this.isFlipped = !this.isFlipped;
+    this.isFlipping = true;
     this.cardStyles = {
       transform: `rotateX(0) rotateY(${this.isFlipped ? 180 : 0}deg)`
     };
+
+    await navigator.clipboard.writeText('omar.benzekri.2003@gmail.com');
+    
+    setTimeout(() => {
+      this.isFlipping = false;
+    }, 600);
   }
 
   playVideo(event: Event) {

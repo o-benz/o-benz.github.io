@@ -5,11 +5,7 @@
     "start": "ng serve --open",
     "build": "ng build",
     "deploy": "ng build",
-    "format": "prettier --config ../.prettierrc.yaml --ignore-path ../.prettierignore --write \"src/**/*\"",
-    "test": "ng test",
-    "coverage": "ng test --code-coverage --source-map=true",
-    "lint": "ng lint --format stylish",
-    "lint:fix": "npm run lint -- --fix"
+    "format": "prettier --config ../.prettierrc.yaml --ignore-path ../.prettierignore --write \"src/**/*\""
   },
   "private": true,
   "dependencies": {

@@ -65,7 +65,7 @@ export class MainPageComponent {
     },
     {
       title: 'geppetto',
-      logo: '../../../assets/AstroBot.png',
+      logo: '../../../assets/geppetto.png',
       link: '#'
     },
     {
@@ -116,7 +116,8 @@ export class MainPageComponent {
     { name: 'Running', animation: '../../../assets/running.mp4', image: '../../../assets/running.png' },
     { name: 'Working Out', animation: '../../../assets/gym.mp4', image: '../../../assets/gym.png' },
     { name: 'Clean Eating', animation: '../../../assets/clean_eating.mp4', image: '../../../assets/clean_eating.png' },
-    { name: 'Friends & Family', animation: '../../../assets/friends_family.mp4', image: '../../../assets/friends_family.png' }
+    { name: 'Friends & Family', animation: '../../../assets/friends_family.mp4', image: '../../../assets/friends_family.png' },
+    { name: 'TV Shows', animation: '../../../assets/tv_shows.mp4', image: '../../../assets/tv_shows.png' }
   ];
 
   @HostListener('window:resize', ['$event'])

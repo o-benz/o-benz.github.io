@@ -115,14 +115,9 @@ export class MainPageComponent {
     { name: 'Music', animation: '../../../assets/music.mp4', image: '../../../assets/music.png' },
     { name: 'Running', animation: '../../../assets/running.mp4', image: '../../../assets/running.png' },
     { name: 'Working Out', animation: '../../../assets/gym.mp4', image: '../../../assets/gym.png' },
+    { name: 'Clean Eating', animation: '../../../assets/clean_eating.mp4', image: '../../../assets/clean_eating.png' },
     { name: 'Friends & Family', animation: '../../../assets/friends_family.mp4', image: '../../../assets/friends_family.png' }
   ];
-
-  contactForm = {
-    name: '',
-    email: '',
-    message: ''
-  };
 
   @HostListener('window:resize', ['$event'])
   onResize() {

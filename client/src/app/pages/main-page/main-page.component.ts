@@ -16,18 +16,18 @@ export class MainPageComponent {
     {
       title: 'Data Engineering Analyst',
       company: 'National Bank of Canada',
-      duration: 'May 2024 – Dec 2024',
-      BP1: `• Manage real-time, near real-time (NRT) or batch data ingestion processes through MFT, AWS and Kafka, ensuring availability and governance of certified data across analytical platforms utilizing proficiency in Python and SQL.`,
+      duration: 'May 2024 – Jan 2025',
+      BP1: `• Manage real-time, near real-time or batch data ETL ingestion processes through MFT, AWS and Kafka, ensuring availability and governance of certified data across analytical platforms utilizing proficiency in Python and SQL.`,
       BP2: `• Lead Agile ceremonies as Scrum Master, drive efficient CI/CD practices through DevOps principles, and train a new team member to full operational capacity within two weeks. Resolve 93% of data flow incidents within SLA.`,
       BP3: `• Engineer innovative solutions to streamline data ingestion workflows using Snowflake and Databricks, reducing processing times, volumes, and associated costs by nearly 30% while upholding data quality standards.`
     },
     {
-      title: 'Software Engineer Intern',
+      title: 'Business Intelligence Intern',
       company: 'ADM Montreal Airports',
       duration: 'May 2023 - Sep 2023',
       BP1: `• Develop and implement various scripts and programs in diverse languages (Python, JS, VBA) to automate menial and repetitive tasks, resulting in a 20% increase in overall operational efficiency.`,
-      BP2: `• Perform data analysis and processing using platforms such as Power BI, Jupyter, or MySQL to extract insights, identify patterns, and present findings through clear reports to support data-driven decision-making.`,
-      BP3: `• Lead software projects from inception to completion, ensure seamless integration of front-end and back-end components while delivering robust solutions increasing user satisfaction by over 15%.`
+      BP2: `• Oversee projects, collaborate with various teams and clients, and deliver outcomes via reports and presentations.`,
+      BP3: `• Perform data analysis and processing using platforms such as Power BI, Jupyter, or MySQL to extract insights, identify patterns, and make data-driven decisions.`
     },
     {
       title: 'Teacher Assistant',

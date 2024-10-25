@@ -229,13 +229,21 @@ h1 {
 }
 
 .timeline-item {
-  margin: 20px 0;
+  margin: 15px 0;
   padding: 20px;
   background: white;
   border-left: 4px solid $primary-color;
   position: relative;
   width: 80%;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+  h3 {
+    margin: 0;
+  }
+
+  p {
+    margin: 0;
+  }
 }
 
 .timeline-item:before {
@@ -254,6 +262,13 @@ h1 {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin: 10px 0px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 /* Projects Section */
@@ -273,7 +288,7 @@ h1 {
   gap: 15px;
   padding: 0 15px;
   overflow-x: scroll;
-  height: 300px;
+  height: 280px;
 }
 
 .carousel::-webkit-scrollbar {
@@ -334,6 +349,7 @@ h1 {
 }
 
 .project-logo {
+  user-select: none;
   width: 150px;
   height: 150px;
   object-fit: cover;

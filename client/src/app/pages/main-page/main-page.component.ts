@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-main-page',
@@ -7,16 +8,36 @@ import { CommonModule } from '@angular/common';
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.scss'],
   imports: [CommonModule],
+  animations: [
+    trigger('collapseExpand', [
+      state('collapsed', style({
+        height: '50.8px',
+        overflow: 'hidden'
+      })),
+      state('expanded', style({
+        height: '*'
+      })),
+      transition('collapsed <=> expanded', [
+        animate('300ms ease-in-out')
+      ])
+    ])
+  ]
 })
 export class MainPageComponent {
   cardStyles = {};
   isFlipped = false;
   isFlipping = false;
+  
+  isExperienceCollapsed = true;
+  isProjectsCollapsed = true;
+  isSkillsCollapsed = true;
+  isInterestsCollapsed = true;
+  
   experiences = [
     {
       title: 'Data Engineering Analyst',
       company: 'National Bank of Canada',
-      duration: 'May 2024 – Jan 2025',
+      duration: 'May 2024 – May 2025',
       BP1: `• Manage real-time, near real-time or batch data ETL ingestion processes through MFT, AWS and Kafka, ensuring availability and governance of certified data across analytical platforms utilizing proficiency in Python and SQL.`,
       BP2: `• Lead Agile ceremonies as Scrum Master, drive efficient CI/CD practices through DevOps principles, and train a new team member to full operational capacity within two weeks. Resolve 93% of data flow incidents within SLA.`,
       BP3: `• Engineer innovative solutions to streamline data ingestion workflows using Snowflake and Databricks, reducing processing times, volumes, and associated costs by nearly 30% while upholding data quality standards.`
@@ -158,6 +179,23 @@ export class MainPageComponent {
     setTimeout(() => {
       this.isFlipping = false;
     }, 600);
+  }
+
+  toggleCollapse(section: string) {
+    switch (section) {
+      case 'experience':
+        this.isExperienceCollapsed = !this.isExperienceCollapsed;
+        break;
+      case 'projects':
+        this.isProjectsCollapsed = !this.isProjectsCollapsed;
+        break;
+      case 'skills':
+        this.isSkillsCollapsed = !this.isSkillsCollapsed;
+        break;
+      case 'interests':
+        this.isInterestsCollapsed = !this.isInterestsCollapsed;
+        break;
+    }
   }
 
   playVideo(event: Event) {

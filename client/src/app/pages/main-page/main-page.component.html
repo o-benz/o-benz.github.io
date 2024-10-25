@@ -20,9 +20,9 @@
   </section>
 
   <!-- Experience Section -->
-  <section class="experience">
+  <section class="experience" [@collapseExpand]="isExperienceCollapsed ? 'collapsed' : 'expanded'">
     <div class="wiggly-container">
-      <h2>Experience</h2>
+      <h2 (click)="toggleCollapse('experience')">Experience</h2>
       <div class="wiggly-line-experience"></div>
     </div>
     <div class="timeline">
@@ -42,9 +42,9 @@
   </section>
 
   <!-- Projects Section -->
-  <section class="projects">
+  <section class="projects" [@collapseExpand]="isProjectsCollapsed ? 'collapsed' : 'expanded'">
     <div class="wiggly-container">
-      <h2 class="project">Projects</h2>
+      <h2 class="project" (click)="toggleCollapse('projects')">Projects</h2>
       <div class="wiggly-line-project"></div>
     </div>
     <div class="carousel">
@@ -61,9 +61,9 @@
   </section>
 
   <!-- Skills Section -->
-  <section class="skills">
+  <section class="skills" [@collapseExpand]="isSkillsCollapsed ? 'collapsed' : 'expanded'">
     <div class="wiggly-container">
-      <h2>Technical Skills</h2>
+      <h2 (click)="toggleCollapse('skills')">Technical Skills</h2>
       <div class="wiggly-line-skills"></div>
     </div>
     <div class="skill-list">
@@ -74,41 +74,40 @@
     </div>
   </section>
 
-<!-- Interests Section -->
-<section class="interests">
-  <div class="wiggly-container">
-    <h2 class="interest-title">Interests</h2>
-    <div class="wiggly-line-interests"></div>
-  </div>
-  <div class="interest-list">
-    <div class="interest-item" *ngFor="let interest of interests">
-      <div class="interest-visual">
-        <img 
-          [src]="interest.image" 
-          alt="{{interest.name}}" 
-          class="interest-image"
-          (mouseenter)="playVideo($event)"
-          (mouseleave)="pauseVideo($event)"
-        />
-        <video 
-          width="150" 
-          height="150" 
-          [attr.src]="interest.animation" 
-          type="video/mp4" 
-          class="interest-animation" 
-          loop 
-          playsInline
-          (mouseenter)="playVideo($event)"
-          (mouseleave)="pauseVideo($event)"
-        ></video>
-      </div>
-      <div class="description">
-        <h2 class="interest-titles">{{ interest.name }}</h2>
+  <!-- Interests Section -->
+  <section class="interests" [@collapseExpand]="isInterestsCollapsed ? 'collapsed' : 'expanded'">
+    <div class="wiggly-container">
+      <h2 class="interest-title" (click)="toggleCollapse('interests')">Interests</h2>
+      <div class="wiggly-line-interests"></div>
+    </div>
+    <div class="interest-list">
+      <div class="interest-item" *ngFor="let interest of interests">
+        <div class="interest-visual">
+          <img 
+            [src]="interest.image" 
+            alt="{{interest.name}}" 
+            class="interest-image"
+            (mouseenter)="playVideo($event)"
+            (mouseleave)="pauseVideo($event)"
+          />
+          <video 
+            width="150" 
+            height="150" 
+            [attr.src]="interest.animation" 
+            type="video/mp4" 
+            class="interest-animation" 
+            loop 
+            playsInline
+            (mouseenter)="playVideo($event)"
+            (mouseleave)="pauseVideo($event)"
+          ></video>
+        </div>
+        <div class="description">
+          <h2 class="interest-titles">{{ interest.name }}</h2>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-
+  </section>
 
   <!-- CSS Kingdom -->
 

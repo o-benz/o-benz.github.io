@@ -1,6 +1,7 @@
 /* Global Styles */
 $primary-color: #463b98;
 $secondary-color: #a88bc3;
+$tertiary-color: #d6d6d6;
 $light-color: #f7f7f7;
 $dark-color: #333;
 $transition-time: 0.5s;
@@ -45,7 +46,7 @@ h2 {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, black, transparent);
+    background: linear-gradient(90deg, transparent, $primary-color, transparent);
     animation: wiggle 2s linear infinite;
   }
 
@@ -62,7 +63,7 @@ h2 {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, $primary-color, transparent);
+    background: linear-gradient(90deg, transparent, $light-color, transparent);
     animation: wiggle 2s linear infinite;
   }
 
@@ -79,7 +80,7 @@ h2 {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, black, transparent);
+    background: linear-gradient(90deg, transparent, $primary-color, transparent);
     animation: wiggle 2s linear infinite;
   }
 
@@ -96,7 +97,7 @@ h2 {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgb(187, 136, 195), transparent);
+    background: linear-gradient(90deg, transparent, $tertiary-color, transparent);
     animation: wiggle 2s linear infinite;
   }
 
@@ -111,6 +112,26 @@ h2 {
       transform: translateX(-100%);
     }
   }
+}
+
+.wiggly-line-experience.expanded::before {
+  background: $primary-color !important;
+  animation: none !important;
+}
+
+.wiggly-line-project.expanded::before {
+  background: $light-color !important;
+  animation: none !important;
+}
+
+.wiggly-line-skills.expanded::before {
+  background: $primary-color !important;
+  animation: none !important;
+}
+
+.wiggly-line-interests.expanded::before {
+  background: $tertiary-color !important;
+  animation: none !important;
 }
 
 @keyframes gradientAnimation {
@@ -133,7 +154,7 @@ h2 {
   align-items: center;
   height: 100vh;
   background: linear-gradient(45deg, $primary-color, $secondary-color);
-  color: white;
+  color: $light-color;
   background-size: 300% 300%;
   background-repeat: no-repeat;
   animation: gradientAnimation 12s ease infinite;
@@ -144,7 +165,7 @@ h2 {
 }
 
 h1 {
-  color: white;
+  color: $light-color;
   text-shadow: 
     1px 1px 2px black, 
     0 0 25px rgb(116, 12, 213), 
@@ -231,7 +252,7 @@ h1 {
 .timeline-item {
   margin: 15px 0;
   padding: 20px;
-  background: white;
+  background: $light-color;
   border-left: 4px solid $primary-color;
   position: relative;
   width: 80%;
@@ -255,7 +276,7 @@ h1 {
   height: 20px;
   background: $primary-color;
   border-radius: 50%;
-  box-shadow: 0 0 0 4px white;
+  box-shadow: 0 0 0 4px $light-color;
 }
 
 .line {
@@ -273,13 +294,13 @@ h1 {
 
 /* Projects Section */
 .project {
-  color: white;
+  color: $light-color;
 }
 
 .projects {
   padding: 15px 0;
   background: $dark-color;
-  color: white;
+  color: $light-color;
 }
 
 .carousel {
@@ -320,12 +341,12 @@ h1 {
   transition: all $transition-time ease;
   text-decoration: none;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: thin white;
+  -webkit-text-stroke: thin $light-color;
 }
 
 .carousel-item:hover {
   transform: scale(1.05);
-  -webkit-text-fill-color: white;
+  -webkit-text-fill-color: $light-color;
 }
 
 .carousel-item:active {
@@ -334,7 +355,7 @@ h1 {
 
 .carousel-content {
   text-decoration: none;
-  color: white;
+  color: $light-color;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -384,7 +405,7 @@ h1 {
 
 .skill-item {
   background: $dark-color;
-  color: white;
+  color: $light-color;
   padding: 20px;
   border-radius: 10px;
   min-width: 140px;
@@ -393,7 +414,8 @@ h1 {
 
 /* Interests Section */
 .interests {
-  background-color: #957ece;
+  // background-color: #957ece;
+  background-color: $primary-color;
   padding: 15px 0;
 }
 
@@ -473,11 +495,11 @@ h1 {
 }
 
 .interest-title {
-  color: #0a014e;
+  color: $tertiary-color;
 }
 
 .interest-titles {
-  color: #0a014e;
+  color: $tertiary-color;
   font-size: 1.5em;
 }
 
@@ -488,7 +510,7 @@ h1 {
 .contact {
   padding: 5px 20px;
   background: lighten($color: $secondary-color, $amount: 10%);
-  color: white;
+  color: $light-color;
 }
 
 .social-media-wrapper {

@@ -23,7 +23,7 @@
   <section class="experience" [@collapseExpand]="isExperienceCollapsed ? 'collapsed' : 'expanded'">
     <div class="wiggly-container">
       <h2 (click)="toggleCollapse('experience')">Experience</h2>
-      <div class="wiggly-line-experience"></div>
+      <div class="wiggly-line-experience" [ngClass]="{'expanded': !isExperienceCollapsed}"></div>
     </div>
     <div class="timeline">
       <div class="timeline-item" *ngFor="let exp of experiences">
@@ -45,7 +45,7 @@
   <section class="projects" [@collapseExpand]="isProjectsCollapsed ? 'collapsed' : 'expanded'">
     <div class="wiggly-container">
       <h2 class="project" (click)="toggleCollapse('projects')">Projects</h2>
-      <div class="wiggly-line-project"></div>
+      <div class="wiggly-line-project" [ngClass]="{'expanded': !isProjectsCollapsed}"></div>
     </div>
     <div class="carousel">
       <div *ngFor="let project of projects">
@@ -64,7 +64,7 @@
   <section class="skills" [@collapseExpand]="isSkillsCollapsed ? 'collapsed' : 'expanded'">
     <div class="wiggly-container">
       <h2 (click)="toggleCollapse('skills')">Technical Skills</h2>
-      <div class="wiggly-line-skills"></div>
+      <div class="wiggly-line-skills" [ngClass]="{'expanded': !isSkillsCollapsed}"></div>
     </div>
     <div class="skill-list">
       <div class="skill-item" *ngFor="let skill of skills">
@@ -78,7 +78,7 @@
   <section class="interests" [@collapseExpand]="isInterestsCollapsed ? 'collapsed' : 'expanded'">
     <div class="wiggly-container">
       <h2 class="interest-title" (click)="toggleCollapse('interests')">Interests</h2>
-      <div class="wiggly-line-interests"></div>
+      <div class="wiggly-line-interests" [ngClass]="{'expanded': !isInterestsCollapsed}"></div>
     </div>
     <div class="interest-list">
       <div class="interest-item" *ngFor="let interest of interests">

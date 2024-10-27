@@ -2,8 +2,8 @@
 $primary-color: #463b98;
 $secondary-color: #a88bc3;
 $tertiary-color: #d6d6d6;
-$light-color: #f7f7f7;
-$dark-color: #333;
+$light-color: #eeeeee;
+$dark-color: #9b85c5;
 $transition-time: 0.5s;
 
 body {
@@ -114,25 +114,25 @@ h2 {
   }
 }
 
-.wiggly-line-experience.expanded::before {
-  background: $primary-color !important;
-  animation: none !important;
-}
+// .wiggly-line-experience.expanded::before {
+//   background: $primary-color !important;
+//   animation: none !important;
+// }
 
-.wiggly-line-project.expanded::before {
-  background: $light-color !important;
-  animation: none !important;
-}
+// .wiggly-line-project.expanded::before {
+//   background: $light-color !important;
+//   animation: none !important;
+// }
 
-.wiggly-line-skills.expanded::before {
-  background: $primary-color !important;
-  animation: none !important;
-}
+// .wiggly-line-skills.expanded::before {
+//   background: $primary-color !important;
+//   animation: none !important;
+// }
 
-.wiggly-line-interests.expanded::before {
-  background: $tertiary-color !important;
-  animation: none !important;
-}
+// .wiggly-line-interests.expanded::before {
+//   background: $tertiary-color !important;
+//   animation: none !important;
+// }
 
 @keyframes gradientAnimation {
   0% {
@@ -237,6 +237,177 @@ h1 {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
 }
 
+/* Education Section */
+.education {
+  padding: 15px 0;
+  background: $dark-color;
+}
+
+.degrees{
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.degree-container {
+  user-select: none;
+  color: #242424;
+  border: 10px solid grey;
+  background-color: #f9f5e7;
+  padding: 30px 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.degree-content {
+  text-align: center;
+  width: 100%;
+}
+
+.crest {
+  width: 60px;
+}
+
+.school-name {
+  font-size: 2.2em;
+  font-weight: bold;
+}
+
+.faculty-name {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.textline {
+  margin: 0;
+  font-size: 0.9em;
+  justify-content: center;
+}
+
+.style1 {
+  font-style: italic;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.student-name {
+  font-size: 2em;
+  font-weight: bold;
+  font-style: italic;
+  margin: 10px 0;
+}
+
+.major {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.minor {
+  margin-top: 2px;
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.degree-title {
+  font-size: 1.7em;
+  font-weight: bold;
+  margin: 5px 0 5px;
+}
+
+.dates {
+  font-size: 1em;
+  font-style: italic;
+  margin: 5px 0 5px;
+}
+
+.signatures {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+
+  p {
+    font-size: 0.9em;
+    text-align: center;
+    line-height: 1.5;
+  }
+
+  .stamp {
+    width: 80px;
+  }
+}
+@media (max-width: 715px) {
+  .degree-container {
+    padding: 20px 40px;
+    border: 5px solid grey;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .crest {
+    width: 30px;
+  }
+
+  .school-name {
+    font-size: 1em;
+  }
+
+  .faculty-name {
+    font-size: 0.5em;
+    margin-bottom: 5px;
+  }
+
+  .textline {
+    font-size: 0.2em;
+  }
+
+  .student-name {
+    font-size: 0.9em;
+    margin: 5px 0;
+  }
+
+  .major {
+    font-size: 0.6em;
+    margin-top: 5px;
+  }
+
+  .minor {
+    font-size: 0.4em;
+    margin-top: 1px;
+  }
+
+  .degree-title {
+    font-size: 0.7em;
+    margin: 1px 0;
+  }
+
+  .dates {
+    font-size: 0.6em;
+    margin: 1px 0;
+  }
+
+  .signatures {
+    margin-top: 10px;
+
+    p {
+      font-size: 0.2em;
+    }
+
+    .stamp {
+      width: 40px;
+    }
+  }
+}
+
+
 /* Experience Section */
 .experience {
   padding: 15px 0;
@@ -317,12 +488,12 @@ h1 {
 }
 
 .carousel::-webkit-scrollbar-thumb {
-  background-color: #a88bc3;
+  background-color: $light-color;
   border-radius: 15px;
 }
 
 .carousel::-webkit-scrollbar-thumb:active {
-  background-color: #4d3f5a;
+  background-color: darken($color: #eeeeee, $amount: 10);
 }
 
 .carousel-item {
@@ -396,11 +567,11 @@ h1 {
 }
 
 .skill-list::-webkit-scrollbar-thumb {
-  background-color: #a88bc3;
+  background-color: $primary-color;
   border-radius: 15px;
 }
 .skill-list::-webkit-scrollbar-thumb:active {
-  background-color: #4d3f5a;
+  background-color: darken($color: #463b98, $amount: 10);
 }
 
 .skill-item {
@@ -415,7 +586,8 @@ h1 {
 /* Interests Section */
 .interests {
   // background-color: #957ece;
-  background-color: $primary-color;
+  // background-color: $primary-color;
+  background-color: $dark-color;
   padding: 15px 0;
 }
 
@@ -467,11 +639,11 @@ h1 {
 }
 
 .interest-list::-webkit-scrollbar-thumb {
-  background-color: #a88bc3;
+  background-color: $light-color;
   border-radius: 15px;
 }
 .interest-list::-webkit-scrollbar-thumb:active {
-  background-color: #4d3f5a;
+  background-color: darken($color: #eeeeee, $amount: 10);
 }
 
 .interest-item{
@@ -495,11 +667,11 @@ h1 {
 }
 
 .interest-title {
-  color: $tertiary-color;
+  color: $light-color;
 }
 
 .interest-titles {
-  color: $tertiary-color;
+  color: $light-color;
   font-size: 1.5em;
 }
 

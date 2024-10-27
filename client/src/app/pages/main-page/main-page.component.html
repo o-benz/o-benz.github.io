@@ -19,11 +19,42 @@
     </div>
   </section>
 
+  <!-- Education Section -->
+  <section class="education" [@collapseExpand]="isEducationCollapsed ? 'collapsed' : 'expanded'">
+    <div class="wiggly-container">
+      <h2 class="project" (click)="toggleCollapse('education')">Education</h2>
+      <div class="wiggly-line-project"></div>
+    </div>
+    <div class="degrees">
+      <div class="degree-container">
+        <div class="degree-content">
+          <img src="../../../assets/crest.png" alt="School Crest" class="crest">
+          <div class="school-name">UNIVERSITÉ DE MONTRÉAL</div>
+          <div class="faculty-name">ÉCOLE POLYTECHNIQUE</div>
+          <p class="textline style1 italic">Whereas the Academic Council of École Polytechnique certifies that</p>
+          <p class="student-name">Omar Benzekri</p>
+          <p class="textline style1 italic">has completed the undergraduate studies in</p>
+          <p class="major">Computer Engineering</p>
+          <p class="minor">AI and Data Science</p>
+          <p class="textline style1 italic">We, the Rector,</p>
+          <p class="textline style1 italic">by decision of the University Council and by Our authority, confer the</p>
+          <p class="degree-title">BACHELOR OF ENGINEERING (B.Eng.)</p>
+          <p class="dates italic">September 2021 - December 2025</p>
+          <div class="signatures">
+            <p class="italic">For École Polytechnique :<br>Signature</p>
+            <img src="../../../assets/stamp.png" alt="Stamp" class="stamp">
+            <p class="italic">For Université de Montréal :<br>Signature</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Experience Section -->
   <section class="experience" [@collapseExpand]="isExperienceCollapsed ? 'collapsed' : 'expanded'">
     <div class="wiggly-container">
       <h2 (click)="toggleCollapse('experience')">Experience</h2>
-      <div class="wiggly-line-experience" [ngClass]="{'expanded': !isExperienceCollapsed}"></div>
+      <div class="wiggly-line-experience"></div>
     </div>
     <div class="timeline">
       <div class="timeline-item" *ngFor="let exp of experiences">
@@ -45,7 +76,7 @@
   <section class="projects" [@collapseExpand]="isProjectsCollapsed ? 'collapsed' : 'expanded'">
     <div class="wiggly-container">
       <h2 class="project" (click)="toggleCollapse('projects')">Projects</h2>
-      <div class="wiggly-line-project" [ngClass]="{'expanded': !isProjectsCollapsed}"></div>
+      <div class="wiggly-line-project"></div>
     </div>
     <div class="carousel">
       <div *ngFor="let project of projects">
@@ -64,7 +95,7 @@
   <section class="skills" [@collapseExpand]="isSkillsCollapsed ? 'collapsed' : 'expanded'">
     <div class="wiggly-container">
       <h2 (click)="toggleCollapse('skills')">Technical Skills</h2>
-      <div class="wiggly-line-skills" [ngClass]="{'expanded': !isSkillsCollapsed}"></div>
+      <div class="wiggly-line-skills"></div>
     </div>
     <div class="skill-list">
       <div class="skill-item" *ngFor="let skill of skills">
@@ -78,7 +109,7 @@
   <section class="interests" [@collapseExpand]="isInterestsCollapsed ? 'collapsed' : 'expanded'">
     <div class="wiggly-container">
       <h2 class="interest-title" (click)="toggleCollapse('interests')">Interests</h2>
-      <div class="wiggly-line-interests" [ngClass]="{'expanded': !isInterestsCollapsed}"></div>
+      <div class="wiggly-line-interests"></div>
     </div>
     <div class="interest-list">
       <div class="interest-item" *ngFor="let interest of interests">

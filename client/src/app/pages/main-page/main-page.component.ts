@@ -1,6 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import { collapseExpandAnimation } from 'src/assets/CollapseExpand';
 
 @Component({
   selector: 'app-main-page',
@@ -8,31 +8,19 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.scss'],
   imports: [CommonModule],
-  animations: [
-    trigger('collapseExpand', [
-      state('collapsed', style({
-        height: '50.8px',
-        overflow: 'hidden'
-      })),
-      state('expanded', style({
-        height: '*'
-      })),
-      transition('collapsed <=> expanded', [
-        animate('300ms ease-in-out')
-      ])
-    ])
-  ]
+  animations: [collapseExpandAnimation]
 })
 export class MainPageComponent {
   cardStyles = {};
   isFlipped = false;
   isFlipping = false;
   
+  isEducationCollapsed = true;
   isExperienceCollapsed = true;
   isProjectsCollapsed = true;
   isSkillsCollapsed = true;
   isInterestsCollapsed = true;
-  
+
   experiences = [
     {
       title: 'Data Engineering Analyst',
@@ -183,6 +171,9 @@ export class MainPageComponent {
 
   toggleCollapse(section: string) {
     switch (section) {
+      case 'education':
+        this.isEducationCollapsed = !this.isEducationCollapsed;
+        break;
       case 'experience':
         this.isExperienceCollapsed = !this.isExperienceCollapsed;
         break;

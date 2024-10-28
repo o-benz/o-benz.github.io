@@ -21,6 +21,27 @@ export class MainPageComponent {
   isSkillsCollapsed = true;
   isInterestsCollapsed = true;
 
+  degrees = [
+    {
+      school: 'UNIVERSITÉ DE MONTRÉAL',
+      facutlty: 'ÉCOLE POLYTECHNIQUE',
+      major: 'Data Engineering and Analytics',
+      minor: `-`,
+      title: `MASTER OF ENGINEERING (M.Eng.)`,
+      dates: `January 2026 - September 2026`,
+      stamp: '../../../assets/stamp-master.png'
+    },
+    {
+      school: 'UNIVERSITÉ DE MONTRÉAL',
+      facutlty: 'ÉCOLE POLYTECHNIQUE',
+      major: 'Computer Engineering',
+      minor: `AI and Data Science`,
+      title: `BACHELOR OF ENGINEERING (B.Eng.)`,
+      dates: `September 2021 - December 2025`,
+      stamp: '../../../assets/stamp-bachelor.png'
+    }
+  ];
+
   experiences = [
     {
       title: 'Data Engineering Analyst',

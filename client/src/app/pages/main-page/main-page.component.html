@@ -26,23 +26,23 @@
       <div class="wiggly-line-project"></div>
     </div>
     <div class="degrees">
-      <div class="degree-container">
+      <div class="degree-container" *ngFor="let degree of degrees">
         <div class="degree-content">
           <img src="../../../assets/crest.png" alt="School Crest" class="crest">
-          <div class="school-name">UNIVERSITÉ DE MONTRÉAL</div>
-          <div class="faculty-name">ÉCOLE POLYTECHNIQUE</div>
+          <div class="school-name">{{ degree.school }}</div>
+          <div class="faculty-name">{{ degree.facutlty }}</div>
           <p class="textline style1 italic">Whereas the Academic Council of École Polytechnique certifies that</p>
           <p class="student-name">Omar Benzekri</p>
           <p class="textline style1 italic">has completed the undergraduate studies in</p>
-          <p class="major">Computer Engineering</p>
-          <p class="minor">AI and Data Science</p>
+          <p class="major">{{ degree.major }}</p>
+          <p class="minor">{{ degree.minor }}</p>
           <p class="textline style1 italic">We, the Rector,</p>
           <p class="textline style1 italic">by decision of the University Council and by Our authority, confer the</p>
-          <p class="degree-title">BACHELOR OF ENGINEERING (B.Eng.)</p>
-          <p class="dates italic">September 2021 - December 2025</p>
+          <p class="degree-title">{{ degree.title }}</p>
+          <p class="dates">{{ degree.dates }}</p>
           <div class="signatures">
             <p class="italic">For École Polytechnique :<br>Signature</p>
-            <img src="../../../assets/stamp.png" alt="Stamp" class="stamp">
+            <img [src]="degree.stamp" alt="Stamp" class="stamp">
             <p class="italic">For Université de Montréal :<br>Signature</p>
           </div>
         </div>

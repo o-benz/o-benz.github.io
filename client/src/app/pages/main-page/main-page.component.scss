@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
 /* Global Styles */
 $primary-color: #463b98;
 $secondary-color: #a88bc3;
-$tertiary-color: #d6d6d6;
+$tertiary-color: #e1e1e1;
 $light-color: #eeeeee;
 $dark-color: #9b85c5;
 $transition-time: 0.5s;
@@ -97,7 +99,7 @@ h2 {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, $tertiary-color, transparent);
+    background: linear-gradient(90deg, transparent, $light-color, transparent);
     animation: wiggle 2s linear infinite;
   }
 
@@ -113,26 +115,6 @@ h2 {
     }
   }
 }
-
-// .wiggly-line-experience.expanded::before {
-//   background: $primary-color !important;
-//   animation: none !important;
-// }
-
-// .wiggly-line-project.expanded::before {
-//   background: $light-color !important;
-//   animation: none !important;
-// }
-
-// .wiggly-line-skills.expanded::before {
-//   background: $primary-color !important;
-//   animation: none !important;
-// }
-
-// .wiggly-line-interests.expanded::before {
-//   background: $tertiary-color !important;
-//   animation: none !important;
-// }
 
 @keyframes gradientAnimation {
   0% {
@@ -244,112 +226,133 @@ h1 {
 }
 
 .degrees{
-  padding: 15px;
   display: flex;
-  justify-content: center;
   align-items: center;
+  gap: 15px;
+  padding: 15px;
+  overflow-x: scroll;
+}
+
+.degrees::-webkit-scrollbar {
+  width: 12px;
+}
+
+.degrees::-webkit-scrollbar-thumb {
+  background-color: $light-color;
+  border-radius: 15px;
+}
+
+.degrees::-webkit-scrollbar-thumb:active {
+  background-color: darken($color: #eeeeee, $amount: 10);
 }
 
 .degree-container {
   user-select: none;
   color: #242424;
-  border: 10px solid grey;
   background-color: #f9f5e7;
-  padding: 30px 90px;
+  padding: 20px 60px;
+  border: 8px solid grey;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  &:hover {
+    transform: scale(1.05);
+    transform: rotateY('20');
+  }
 }
 
 .degree-content {
   text-align: center;
-  width: 100%;
+  width: 330px;
 }
 
 .crest {
-  width: 60px;
+  width: 40px;
 }
 
 .school-name {
-  font-size: 2.2em;
+  font-size: 1.5em;
   font-weight: bold;
 }
 
 .faculty-name {
-  font-size: 1.4em;
+  font-size: 1.1em;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .textline {
   margin: 0;
-  font-size: 0.9em;
+  font-size: 0.7em;
   justify-content: center;
 }
 
-.style1 {
-  font-style: italic;
-}
-
 .italic {
-  font-style: italic;
+  font-family: 'Great Vibes', cursive;
 }
 
 .student-name {
-  font-size: 2em;
+  font-size: 1.2em;
   font-weight: bold;
   font-style: italic;
-  margin: 10px 0;
+  margin: 5px 0;
 }
 
 .major {
-  font-size: 1.5em;
+  font-size: 0.9em;
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 5px;
   margin-bottom: 0;
 }
 
 .minor {
-  margin-top: 2px;
-  margin-bottom: 10px;
-  font-size: 1.2em;
+  margin-top: 1px;
+  margin-bottom: 5px;
+  font-size: 0.7em;
   font-weight: bold;
 }
 
 .degree-title {
-  font-size: 1.7em;
+  font-size: 1em;
   font-weight: bold;
-  margin: 5px 0 5px;
+  margin: 5px 0;
 }
 
 .dates {
-  font-size: 1em;
+  font-size: 0.9em;
   font-style: italic;
-  margin: 5px 0 5px;
+  margin: 2px 0;
 }
 
 .signatures {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 10px;
 
   p {
-    font-size: 0.9em;
+    font-size: 0.6em;
     text-align: center;
     line-height: 1.5;
   }
 
   .stamp {
-    width: 80px;
+    width: 50px;
   }
 }
-@media (max-width: 752px) {
+@media (max-width: 750px) {
   .degree-container {
     padding: 20px 60px;
     border: 5px solid grey;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .degree-content {
+    width: 220px;
   }
 
   .crest {
@@ -398,7 +401,7 @@ h1 {
     margin-top: 10px;
 
     p {
-      font-size: 0.2em;
+      font-size: 0.5em;
     }
 
     .stamp {
@@ -411,7 +414,7 @@ h1 {
 /* Experience Section */
 .experience {
   padding: 15px 0;
-  background: $light-color;
+  background: $tertiary-color;
 }
 
 .timeline {
@@ -550,7 +553,7 @@ h1 {
 /* Skills Section */
 .skills {
   padding: 15px 0;
-  background: $light-color;
+  background: $tertiary-color;
 }
 
 .skill-list {

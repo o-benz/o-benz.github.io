@@ -94,9 +94,9 @@ export class MainPageComponent {
       link: 'https://github.com/o-benz/SmartyShowdown'
     },
     {
-      title: 'geppetto',
+      title: 'Geppetto',
       logo: '../../../assets/geppetto.png',
-      link: '#'
+      link: 'https://github.com/o-benz/SmartyShowdown'
     },
     {
       title: 'The Polynator',

@@ -96,7 +96,7 @@ export class MainPageComponent {
     {
       title: 'Geppetto',
       logo: '../../../assets/geppetto.png',
-      link: 'https://github.com/o-benz/SmartyShowdown'
+      link: 'https://github.com/o-benz/Geppetto'
     },
     {
       title: 'The Polynator',

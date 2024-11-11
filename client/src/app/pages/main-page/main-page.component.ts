@@ -14,6 +14,7 @@ export class MainPageComponent {
   cardStyles = {};
   isFlipped = false;
   isFlipping = false;
+  isDarkMode = false;
   
   isEducationCollapsed = true;
   isExperienceCollapsed = true;
@@ -79,6 +80,11 @@ export class MainPageComponent {
 
   projects = [
     {
+      title: 'Geppetto',
+      logo: '../../../assets/Geppetto.png',
+      link: 'https://github.com/o-benz/Geppetto'
+    },
+    {
       title: 'StepByStep',
       logo: '../../../assets/StepByStep.png',
       link: 'https://github.com/o-benz/StepByStep'
@@ -94,14 +100,14 @@ export class MainPageComponent {
       link: 'https://github.com/o-benz/SmartyShowdown'
     },
     {
-      title: 'Geppetto',
-      logo: '../../../assets/geppetto.png',
-      link: 'https://github.com/o-benz/Geppetto'
-    },
-    {
       title: 'The Polynator',
       logo: '../../../assets/Polynator.png',
       link: 'https://github.com/o-benz/The-Polynator'
+    },
+    {
+      title: 'ROBO-QUEST',
+      logo: '../../../assets/ROBOQUEST.png',
+      link: 'https://github.com/o-benz/ROBO-QUEST'
     }
   ];
 
@@ -168,6 +174,16 @@ export class MainPageComponent {
     this.cardStyles = {
       transform: `rotateX(${rotateX}deg) rotateY(${rotateY + (this.isFlipped ? 180 : 0)}deg)`
     };
+  }
+
+  toggleTheme() {
+    this.isDarkMode = !this.isDarkMode;
+    const theme = this.getCurrentTheme();
+    document.documentElement.setAttribute('data-theme', theme);
+  }
+
+  getCurrentTheme() {
+    return this.isDarkMode ? 'dark-theme' : 'light-theme';
   }
 
   resetCardPosition(): void {

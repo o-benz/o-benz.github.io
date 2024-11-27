@@ -47,7 +47,7 @@ export class MainPageComponent {
     {
       title: 'Data Engineering Analyst',
       company: 'National Bank of Canada',
-      duration: 'May 2024 – May 2025',
+      duration: 'May 2024 – Present',
       BP1: `• Manage real-time, near real-time or batch data ETL ingestion processes through MFT, AWS and Kafka, ensuring availability and governance of certified data across analytical platforms utilizing proficiency in Python and SQL.`,
       BP2: `• Lead Agile ceremonies as Scrum Master, drive efficient CI/CD practices through DevOps principles, and train a new team member to full operational capacity within two weeks. Resolve 93% of data flow incidents within SLA.`,
       BP3: `• Engineer innovative solutions to streamline data ingestion workflows using Snowflake and Databricks, reducing processing times, volumes, and associated costs by nearly 30% while upholding data quality standards.`

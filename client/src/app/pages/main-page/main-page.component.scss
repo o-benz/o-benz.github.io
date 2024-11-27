@@ -344,9 +344,9 @@ h1 {
 .degrees{
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 15px;
   padding: 15px;
-  overflow-x: scroll;
 }
 
 .degrees::-webkit-scrollbar {
@@ -460,7 +460,80 @@ h1 {
     width: 50px;
   }
 }
+
+@media (max-width: 964px) {
+  .degree-container {
+    padding: 20px 60px;
+    border: 5px solid grey;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .degree-content {
+    width: 220px;
+  }
+
+  .crest {
+    width: 30px;
+  }
+
+  .school-name {
+    font-size: 1em;
+  }
+
+  .faculty-name {
+    font-size: 0.5em;
+    margin-bottom: 5px;
+  }
+
+  .textline {
+    font-size: 0.2em;
+  }
+
+  .student-name {
+    font-size: 0.9em;
+    margin: 5px 0;
+  }
+
+  .major {
+    font-size: 0.6em;
+    margin-top: 5px;
+  }
+
+  .minor {
+    font-size: 0.4em;
+    margin-top: 1px;
+  }
+
+  .degree-title {
+    font-size: 0.7em;
+    margin: 1px 0;
+  }
+
+  .dates {
+    font-size: 0.6em;
+    margin: 1px 0;
+  }
+
+  .signatures {
+    margin-top: 10px;
+
+    p {
+      font-size: 0.5em;
+    }
+
+    .stamp {
+      width: 40px;
+    }
+  }
+}
+
+
 @media (max-width: 750px) {
+  .degrees{
+    justify-content: flex-start;
+    overflow-x: scroll;
+  }
+
   .degree-container {
     padding: 20px 60px;
     border: 5px solid grey;

@@ -62,7 +62,7 @@ export class MainPageComponent {
     },
     {
       title: 'Teacher Assistant',
-      company: 'Collège international Marie de France',
+      company: 'Polytechnique Montréal',
       duration: 'Jan 2023 - Dec 2023',
       BP1: `• Conduct weekly in-person lab sessions for over 40 students to reinforce key concepts in C++ and OOP.`,
       BP2: `• Grade assignments, quizzes and exams, providing detailed feedback to students on their performance.`,
@@ -90,6 +90,11 @@ export class MainPageComponent {
       link: 'https://github.com/o-benz/StepByStep'
     },
     {
+      title: 'ROBO-QUEST',
+      logo: '../../../assets/ROBOQUEST.png',
+      link: 'https://github.com/o-benz/ROBO-QUEST'
+    },
+    {
       title: 'Mealer',
       logo: '../../../assets/Mealer.png',
       link: 'https://github.com/o-benz/Mealer'
@@ -103,11 +108,6 @@ export class MainPageComponent {
       title: 'The Polynator',
       logo: '../../../assets/Polynator.png',
       link: 'https://github.com/o-benz/The-Polynator'
-    },
-    {
-      title: 'ROBO-QUEST',
-      logo: '../../../assets/ROBOQUEST.png',
-      link: 'https://github.com/o-benz/ROBO-QUEST'
     }
   ];
 

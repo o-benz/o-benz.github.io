@@ -89,7 +89,7 @@
     </div>
     <div class="carousel">
       <div *ngFor="let project of projects">
-        <a  [href]="project.link" class="carousel-item">
+        <a [href]="project.link" target="_blank" class="carousel-item">
           <div class="carousel-content">
             <h3 class="project-title">{{ project.title }}</h3>
             <img [src]="project.logo" alt="{{ project.title }} Logo" class="project-logo" />

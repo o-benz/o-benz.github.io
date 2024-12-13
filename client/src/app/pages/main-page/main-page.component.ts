@@ -186,6 +186,13 @@ export class MainPageComponent {
     return this.isDarkMode ? 'dark-theme' : 'light-theme';
   }
 
+  scrollToEducation(): void {
+    const educationSection = document.getElementById('education-section');
+    if (educationSection) {
+      educationSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
   resetCardPosition(): void {
     this.cardStyles = {
       transform: `rotateX(0) rotateY(${this.isFlipped ? 180 : 0}deg)`
@@ -199,7 +206,9 @@ export class MainPageComponent {
       transform: `rotateX(0) rotateY(${this.isFlipped ? 180 : 0}deg)`
     };
 
-    await navigator.clipboard.writeText('omar.benzekri.2003@gmail.com');
+    if (this.isFlipped) {
+      await navigator.clipboard.writeText('omar.benzekri.2003@gmail.com');
+    }
     
     setTimeout(() => {
       this.isFlipping = false;

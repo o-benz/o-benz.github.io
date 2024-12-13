@@ -20,7 +20,7 @@
 
     <div class="arrow-container">
       <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" viewBox="0 0 24 24" fill="white">
-        <path d="M12 16l-6-6h12l-6 6zm0 4l-6-6h12l-6 6z"/>
+        <path d="M12 16l-6-6h12l-6 6zm0 4l-6-6h12l-6 6z" (click)="scrollToEducation()" class="arrow"/>
       </svg>
     </div>
 
@@ -35,7 +35,7 @@
   </section>
 
   <!-- Education Section -->
-  <section class="education" [@collapseExpand]="isEducationCollapsed ? 'collapsed' : 'expanded'">
+  <section class="education" id="education-section" [@collapseExpand]="isEducationCollapsed ? 'collapsed' : 'expanded'">
     <div class="wiggly-container">
       <h2 class="project" (click)="toggleCollapse('education')">Education</h2>
       <div class="wiggly-line-project"></div>

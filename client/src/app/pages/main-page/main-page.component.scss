@@ -351,6 +351,8 @@ h1 {
 .education {
   padding: 15px 0;
   background: $dark-color;
+  position: relative;
+  z-index: 1;
 }
 
 .degrees{
@@ -616,6 +618,8 @@ h1 {
 .experience {
   padding: 15px 0;
   background: $tertiary-color;
+  position: relative;
+  z-index: 2;
 }
 
 .timeline {
@@ -676,6 +680,8 @@ h1 {
   padding: 15px 0;
   background: $dark-color;
   color: $light-color;
+  position: relative;
+  z-index: 3;
 }
 
 .carousel {
@@ -755,6 +761,8 @@ h1 {
 .skills {
   padding: 15px 0;
   background: $tertiary-color;
+  position: relative;
+  z-index: 4;
 }
 
 .skill-list {
@@ -771,11 +779,11 @@ h1 {
 }
 
 .skill-list::-webkit-scrollbar-thumb {
-  background-color: $primary-color;
+  background-color: $dark-color;
   border-radius: 15px;
 }
 .skill-list::-webkit-scrollbar-thumb:active {
-  background-color: darken($color: #463b98, $amount: 10);
+  background-color: darken($color: #9b85c5, $amount: 10);
 }
 
 .skill-item {
@@ -793,6 +801,8 @@ h1 {
   // background-color: $primary-color;
   background-color: $dark-color;
   padding: 15px 0;
+  position: relative;
+  z-index: 5;
 }
 
 .interest-animation {
@@ -887,6 +897,8 @@ h1 {
   padding: 5px 20px;
   background: lighten($color: $secondary-color, $amount: 10%);
   color: $light-color;
+  position: relative;
+  z-index: 6;
 }
 
 .social-media-wrapper {

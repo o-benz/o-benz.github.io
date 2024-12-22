@@ -108,42 +108,32 @@ export class MainPageComponent {
       title: 'The Polynator',
       logo: '../../../assets/Polynator.png',
       link: 'https://github.com/o-benz/The-Polynator'
+    },
+    {
+      title: 'OverEngineered',
+      logo: '../../../assets/OverEngineered.png',
+      link: 'https://github.com/o-benz/OverEngineered'
     }
   ];
 
   skills = [
-    { name: 'Java', level: 'Advanced' },
     { name: 'Python', level: 'Advanced' },
     { name: 'C/C++', level: 'Advanced' },
-    { name: 'C#', level: 'Intermediate' },
     { name: 'SQL', level: 'Advanced' },
     { name: 'JS/TS', level: 'Advanced' },
-    { name: 'Kotlin', level: 'Intermediate' },
-    { name: 'VBA', level: 'Intermediate' },
-    { name: 'R', level: 'Intermediate' },
-    { name: 'HTML/CSS', level: 'Advanced' },
-    { name: 'XML', level: 'Intermediate' },
-    { name: 'Git', level: 'Advanced' },
-    { name: 'Linux', level: 'Advanced' },
+    { name: 'HTML', level: 'Advanced' },
+    { name: 'CSS/SCSS', level: 'Advanced' },
+    { name: 'R', level: 'Advanced' },
+    { name: 'Angular', level: 'Advanced' },
     { name: 'React', level: 'Intermediate' },
     { name: 'Node.js', level: 'Advanced' },
-    { name: 'Angular', level: 'Advanced' },
-    { name: 'MongoDB', level: 'Intermediate' },
-    { name: 'Firebase', level: 'Intermediate' },
-    { name: 'AWS', level: 'Advanced' },
     { name: '.NET', level: 'Intermediate' },
+    { name: 'MongoDB', level: 'Intermediate' },
+    { name: 'AWS', level: 'Advanced' },
     { name: 'Snowflake', level: 'Advanced' },
-    { name: 'Docker', level: 'Intermediate' },
     { name: 'Databricks', level: 'Intermediate' },
-    { name: 'SAP', level: 'Intermediate' },
-    { name: 'SharePoint', level: 'Intermediate' },
     { name: 'Power BI', level: 'Intermediate' },
     { name: 'Excel', level: 'Advanced' },
-    { name: 'Powerpoint', level: 'Advanced' },
-    { name: 'Jira', level: 'Intermediate' },
-    { name: 'Power Apps', level: 'Intermediate' },
-    { name: 'Power Automate', level: 'Intermediate' },
-    { name: 'Tableau', level: 'Intermediate' }
   ];
 
   interests = [

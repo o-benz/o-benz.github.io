@@ -8,14 +8,6 @@ $light-color: #eeeeee;
 $dark-color: #9b85c5;
 $transition-time: 0.5s;
 
-body {
-  font-family: 'Roboto', sans-serif;
-  margin: 0;
-  padding: 0;
-  background: $light-color;
-  color: $dark-color;
-}
-
 h2 {
   user-select: none;
   text-align: center;
@@ -104,18 +96,6 @@ h2 {
   }
 }
 
-@keyframes gradientAnimation {
-  0% {
-      background-position: 0% 50%;
-  }
-  50% {
-      background-position: 100% 50%;
-  }
-  100% {
-      background-position: 0% 50%;
-  }
-}
-
 /* Hero Section */
 .hero {
   position: relative; 
@@ -127,7 +107,19 @@ h2 {
   color: $light-color;
   background-size: 300% 300%;
   background-repeat: no-repeat;
-  animation: gradientAnimation 12s ease infinite;
+  animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
 }
 
 .flipped {

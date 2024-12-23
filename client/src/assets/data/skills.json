@@ -1,0 +1,19 @@
+[
+    { "name": "Python", "level": "Advanced" },
+    { "name": "C/C++", "level": "Advanced" },
+    { "name": "SQL", "level": "Advanced" },
+    { "name": "JS/TS", "level": "Advanced" },
+    { "name": "HTML", "level": "Advanced" },
+    { "name": "CSS/SCSS", "level": "Advanced" },
+    { "name": "R", "level": "Advanced" },
+    { "name": "Angular", "level": "Advanced" },
+    { "name": "React", "level": "Intermediate" },
+    { "name": "Node.js", "level": "Advanced" },
+    { "name": ".NET", "level": "Intermediate" },
+    { "name": "MongoDB", "level": "Intermediate" },
+    { "name": "AWS", "level": "Advanced" },
+    { "name": "Snowflake", "level": "Advanced" },
+    { "name": "Databricks", "level": "Intermediate" },
+    { "name": "Power BI", "level": "Intermediate" },
+    { "name": "Excel", "level": "Advanced" }
+]

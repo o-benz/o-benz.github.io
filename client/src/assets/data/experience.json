@@ -1,0 +1,34 @@
+[
+    {
+        "title": "Data Engineering Analyst",
+        "company": "National Bank of Canada",
+        "duration": "May 2024 – Present",
+        "BP1": "• Manage real-time, near real-time or batch data ETL ingestion processes through MFT, AWS and Kafka, ensuring availability and governance of certified data across analytical platforms utilizing proficiency in Python and SQL.",
+        "BP2": "• Lead Agile ceremonies as Scrum Master, drive efficient CI/CD practices through DevOps principles, and train a new team member to full operational capacity within two weeks. Resolve 93% of data flow incidents within SLA.",
+        "BP3": "• Engineer innovative solutions to streamline data ingestion workflows using Snowflake and Databricks, reducing processing times, volumes, and associated costs by nearly 30% while upholding data quality standards."
+    },
+    {
+        "title": "Business Intelligence Intern",
+        "company": "ADM Montreal Airports",
+        "duration": "May 2023 - Sep 2023",
+        "BP1": "• Develop and implement various scripts and programs in diverse languages (Python, JS, VBA) to automate menial and repetitive tasks, resulting in a 20% increase in overall operational efficiency.",
+        "BP2": "• Oversee projects, collaborate with various teams and clients, and deliver outcomes via reports and presentations.",
+        "BP3": "• Perform data analysis and processing using platforms such as Power BI, Jupyter, or MySQL to extract insights, identify patterns, and make data-driven decisions."
+    },
+    {
+        "title": "Teacher Assistant",
+        "company": "Polytechnique Montréal",
+        "duration": "Jan 2023 - Dec 2023",
+        "BP1": "• Conduct weekly in-person lab sessions for over 40 students to reinforce key concepts in C++ and OOP.",
+        "BP2": "• Grade assignments, quizzes and exams, providing detailed feedback to students on their performance.",
+        "BP3": "• Provide code debugging and troubleshooting assistance to students during and outside of office hours."
+    },
+    {
+        "title": "Coding Instructor",
+        "company": "Collège international Marie de France",
+        "duration": "Sep 2020 - Present",
+        "BP1": "• Teach the basics of programming and computer science to a group of 30 young students.",
+        "BP2": "• Design a fun and complete curriculum to foster curiosity and interest in a software-related career.",
+        "BP3": "• Develop interactive coding projects and exercises tailored to enhance problem-solving skills and creativity."
+    }
+]

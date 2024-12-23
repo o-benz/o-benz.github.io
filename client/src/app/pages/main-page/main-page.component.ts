@@ -27,7 +27,6 @@ export class MainPageComponent {
       school: 'UNIVERSITÉ DE MONTRÉAL',
       facutlty: 'ÉCOLE POLYTECHNIQUE',
       major: 'Data Engineering and Analytics',
-      minor: `-`,
       title: `MASTER OF ENGINEERING (M.Eng.)`,
       dates: `January 2026 - September 2026`,
       stamp: '../../../assets/stamp-master.png'

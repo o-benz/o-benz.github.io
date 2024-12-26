@@ -5,7 +5,7 @@
       "major": "Data Engineering and Analytics",
       "title": "MASTER OF ENGINEERING (M.Eng.)",
       "dates": "January 2026 - September 2026",
-      "stamp": "../../../assets/stamp-master.png"
+      "stamp": "../../assets/education/stamp-master.png"
     },
     {
       "school": "UNIVERSITÉ DE MONTRÉAL",
@@ -14,6 +14,6 @@
       "minor": "AI and Data Science",
       "title": "BACHELOR OF ENGINEERING (B.Eng.)",
       "dates": "September 2021 - December 2025",
-      "stamp": "../../../assets/stamp-bachelor.png"
+      "stamp": "../../assets/education/stamp-bachelor.png"
     }
 ]

@@ -1,7 +1,7 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { collapseExpandAnimation } from 'src/assets/CollapseExpand';
+import { collapseExpandAnimation } from 'src/assets/animations/CollapseExpand';
 
 @Component({
   selector: 'app-main-page',

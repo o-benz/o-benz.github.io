@@ -1,37 +1,37 @@
 [
     {
         "title": "Geppetto",
-        "logo": "../../../assets/Geppetto.png",
+        "logo": "../../assets/projects/Geppetto.png",
         "link": "https://github.com/o-benz/Geppetto"
     },
     {
         "title": "StepByStep",
-        "logo": "../../../assets/StepByStep.png",
+        "logo": "../../assets/projects/StepByStep.png",
         "link": "https://github.com/o-benz/StepByStep"
     },
     {
         "title": "ROBO-QUEST",
-        "logo": "../../../assets/ROBOQUEST.png",
+        "logo": "../../assets/projects/ROBOQUEST.png",
         "link": "https://github.com/o-benz/ROBO-QUEST"
     },
     {
         "title": "Mealer",
-        "logo": "../../../assets/Mealer.png",
+        "logo": "../../assets/projects/Mealer.png",
         "link": "https://github.com/o-benz/Mealer"
     },
     {
         "title": "SmartyShowdown",
-        "logo": "../../../assets/SmartyShowdown.png",
+        "logo": "../../assets/projects/SmartyShowdown.png",
         "link": "https://github.com/o-benz/SmartyShowdown"
     },
     {
         "title": "The Polynator",
-        "logo": "../../../assets/Polynator.png",
+        "logo": "../../assets/projects/Polynator.png",
         "link": "https://github.com/o-benz/ThePolynator"
     },
     {
         "title": "OverEngineered",
-        "logo": "../../../assets/OverEngineered.png",
+        "logo": "../../assets/projects/OverEngineered.png",
         "link": "https://github.com/o-benz/OverEngineered"
     }
 ]

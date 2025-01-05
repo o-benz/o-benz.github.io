@@ -1,34 +1,52 @@
 [
     {
-        "title": "Data Engineering Analyst",
+        "titles": ["Software Developer (Capstone Intern)"],
         "company": "National Bank of Canada",
-        "duration": "May 2024 – Present",
-        "BP1": "• Manage real-time, near real-time or batch data ETL ingestion processes through MFT, AWS and Kafka, ensuring availability and governance of certified data across analytical platforms utilizing proficiency in Python and SQL.",
-        "BP2": "• Lead Agile ceremonies as Scrum Master, drive efficient CI/CD practices through DevOps principles, and train a new team member to full operational capacity within two weeks. Resolve 93% of data flow incidents within SLA.",
-        "BP3": "• Engineer innovative solutions to streamline data ingestion workflows using Snowflake and Databricks, reducing processing times, volumes, and associated costs by nearly 30% while upholding data quality standards."
+        "durations": ["Jan 2025 – Apr 2025"],
+        "BulletPoints": [
+            "• Enhance the SPL web interface by adding critical functionalities to automate software asset creation and lifecycle management, integrating REST APIs for seamless tool interoperability.",
+            "• Design DevOps pipelines/workflows using Azure and GitHub Actions, reducing manual setup time by 60%.",
+            "• Collaborate in an Agile environment with senior developers to automate migration processes for legacy assets."
+        ]
     },
     {
-        "title": "Business Intelligence Intern",
+        "titles": ["Data Engineering Analyst (Part-Time)", "Data Engineering Analyst (Intern)"],
+        "company": "National Bank of Canada",
+        "durations": ["Sep 2024 – Apr 2025", "May 2024 – Aug 2024"],
+        "BulletPoints": [
+            "• Manage real-time, near real-time or batch data ETL ingestion processes through MFT, AWS and Kafka, ensuring availability and governance of certified data across analytical platforms utilizing proficiency in Python and SQL.",
+            "• Lead Agile ceremonies as Scrum Master, drive efficient CI/CD practices through DevOps principles, and train a new team member to full operational capacity within two weeks. Resolve 93% of data flow incidents within SLA.",
+            "• Engineer innovative solutions to streamline data ingestion workflows using Snowflake and Databricks, reducing processing times, volumes, and associated costs by nearly 30% while upholding data quality standards."
+        ]
+    },
+    {
+        "titles": ["Business Intelligence Engineer (Intern)"],
         "company": "ADM Montreal Airports",
-        "duration": "May 2023 - Sep 2023",
-        "BP1": "• Develop and implement various scripts and programs in diverse languages (Python, JS, VBA) to automate menial and repetitive tasks, resulting in a 20% increase in overall operational efficiency.",
-        "BP2": "• Oversee projects, collaborate with various teams and clients, and deliver outcomes via reports and presentations.",
-        "BP3": "• Perform data analysis and processing using platforms such as Power BI, Jupyter, or MySQL to extract insights, identify patterns, and make data-driven decisions."
+        "durations": ["May 2023 - Sep 2023"],
+        "BulletPoints": [
+            "• Develop various scripts to automate menial tasks, resulting in a 20% increase in overall operational efficiency.",
+            "• Oversee projects, collaborate with various teams and clients, and deliver outcomes via reports and presentations.",
+            "• Perform data analysis and processing to extract insights, identify patterns, and make data-driven decisions."
+        ]
     },
     {
-        "title": "Teacher Assistant",
+        "titles": ["Teacher Assistant (Part-Time)"],
         "company": "Polytechnique Montréal",
-        "duration": "Jan 2023 - Dec 2023",
-        "BP1": "• Conduct weekly in-person lab sessions for over 40 students to reinforce key concepts in C++ and OOP.",
-        "BP2": "• Grade assignments, quizzes and exams, providing detailed feedback to students on their performance.",
-        "BP3": "• Provide code debugging and troubleshooting assistance to students during and outside of office hours."
+        "durations": ["Jan 2023 - Dec 2023"],
+        "BulletPoints": [
+            "• Conduct weekly in-person lab sessions for over 40 students to reinforce key concepts in C++ and OOP.",
+            "• Grade assignments, quizzes and exams, providing detailed feedback to students on their performance.",
+            "• Provide code debugging and troubleshooting assistance to students during and outside of office hours."
+        ]
     },
     {
-        "title": "Coding Instructor",
+        "titles": ["Coding Instructor (Part-Time)"],
         "company": "Collège international Marie de France",
-        "duration": "Sep 2020 - Present",
-        "BP1": "• Teach the basics of programming and computer science to a group of 30 young students.",
-        "BP2": "• Design a fun and complete curriculum to foster curiosity and interest in a software-related career.",
-        "BP3": "• Develop interactive coding projects and exercises tailored to enhance problem-solving skills and creativity."
+        "durations": ["Sep 2020 - Dec 2024"],
+        "BulletPoints": [
+            "• Teach the basics of programming and computer science to a group of 30 young students.",
+            "• Design a fun and complete curriculum to foster curiosity and interest in a software-related career.",
+            "• Develop interactive coding projects and exercises tailored to enhance problem-solving skills and creativity."
+        ]
     }
 ]

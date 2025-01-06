@@ -29,3 +29,7 @@ Coming soon! Behold the most **glorious section** of this portfolio—the **CSS 
 - **Angular**
 - **SCSS** (naturally)
 - **TypeScript**
+
+## 📄 License  
+
+This project is licensed under the [MIT License](LICENSE), so feel free to use, modify, and share it as you like.  

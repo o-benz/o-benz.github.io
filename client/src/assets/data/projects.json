@@ -33,5 +33,10 @@
         "title": "OverEngineered",
         "logo": "../../assets/projects/OverEngineered.png",
         "link": "https://github.com/o-benz/OverEngineered"
+    },
+    {
+        "title": "D&N",
+        "logo": "../../assets/projects/wedding.png",
+        "link": "https://drissandnawal.github.io/"
     }
 ]

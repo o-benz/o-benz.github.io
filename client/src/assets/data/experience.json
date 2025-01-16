@@ -4,8 +4,8 @@
         "company": "CAE Inc.",
         "durations": ["Jan 2025 – Apr 2025"],
         "BulletPoints": [
-            "• Enhance the SPL web interface by adding critical functionalities to automate software asset creation and lifecycle management, integrating REST APIs for seamless tool interoperability.",
-            "• Design DevOps pipelines/workflows using Azure and GitHub Actions, reducing manual setup time by 60%.",
+            "• Build a self-service web portal to automate software asset creation and lifecycle processes, integrating REST APIs.",
+            "• Design DevOps pipelines/workflows using AMT, Azure and GitHub Actions, reducing manual setup time by 60%.",
             "• Collaborate in an Agile environment with senior developers to automate migration processes for legacy assets."
         ]
     },

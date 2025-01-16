@@ -112,13 +112,19 @@
       <h2 (click)="toggleCollapse('skills')">Technical Skills</h2>
       <div class="wiggly-line line-skills"></div>
     </div>
-    <div class="skill-list">
-      <div class="skill-item" *ngFor="let skill of skills">
-        <div class="skill-line">
-          <h4>{{ skill.name }}</h4>
-          <img [src]="skill.icon" alt="Icon" class="icon">
+    
+    <div class="skill-categories">
+      <div *ngFor="let category of skills | keyvalue">
+        <h3 class="skill-category">{{ category.key }}</h3>
+        <div class="skill-list">
+          <div class="skill-item" *ngFor="let skill of category.value">
+            <div class="skill-line">
+              <h4>{{ skill.name }}</h4>
+              <img [src]="skill.icon" alt="Icon" class="icon">
+            </div>
+            <p>{{ skill.level }}</p>
+          </div>
         </div>
-        <p>{{ skill.level }}</p>
       </div>
     </div>
   </section>

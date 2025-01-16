@@ -737,22 +737,21 @@ h1 {
 .skill-list {
   display: flex;
   align-items: center;
-  gap: 15px;
-  padding: 15px;
+  gap: 10px;
   overflow-x: scroll;
-  height: 190px;
+  padding: 20px 0 5px 0;
   
   &::-webkit-scrollbar {
-    width: 12px;
+    width: 6px;
   }
 
   &::-webkit-scrollbar-thumb {
     background-color: $dark-color;
-    border-radius: 15px;
+    border-radius: 12px;
   }
   
   &::-webkit-scrollbar-thumb:active {
-    background-color: darken($color: #9b85c5, $amount: 10);
+    background-color: #b097df;
   }
 }
 
@@ -765,6 +764,10 @@ h1 {
   text-align: center;
   user-select: none;
   transition: all 0.3s;
+
+  &:first-child {
+    margin-left: 10px;
+  }
 
   &:hover {
     transform: translateY(-2px);
@@ -786,6 +789,15 @@ h1 {
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+.skill-category {
+  padding: 5px 10px 0 10px;
+  margin: 0;
+}
+
+.skill-categories {
+  margin-top: 10px;
 }
 
 /* Interests Section */

@@ -394,7 +394,7 @@ h1 {
   padding: 15px;
   
   &::-webkit-scrollbar {
-    width: 12px;
+    height: 10px;
   }
   
   &::-webkit-scrollbar-thumb {
@@ -576,6 +576,14 @@ h1 {
     justify-content: flex-start;
     overflow-x: scroll;
   }
+
+  .icon {
+    height: 30px !important;
+  }
+
+  .skill-category {
+    width: 300px !important;
+  }
 }
 
 /* Experience Section */
@@ -600,6 +608,7 @@ h1 {
   position: relative;
   width: 80%;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
 
   h3 {
     margin: 0;
@@ -662,7 +671,7 @@ h1 {
   height: 280px;
 
   &::-webkit-scrollbar {
-    width: 12px;
+    height: 10px;
   }
   
   &::-webkit-scrollbar-thumb {
@@ -734,70 +743,50 @@ h1 {
   z-index: 4;
 }
 
+.skill-category {
+  padding: 15px;
+  border-radius: 15px;
+  background: white;
+  width: 650px;
+  // &:nth-child(2n) {
+  //   flex-direction: row-reverse;
+  // }
+}
+
 .skill-list {
   display: flex;
   align-items: center;
-  gap: 10px;
-  overflow-x: scroll;
-  padding: 20px 0 5px 0;
-  
-  &::-webkit-scrollbar {
-    width: 6px;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background-color: $dark-color;
-    border-radius: 12px;
-  }
-  
-  &::-webkit-scrollbar-thumb:active {
-    background-color: #b097df;
-  }
+  justify-content: space-between;
 }
 
-.skill-item {
-  background: $dark-color;
-  color: $light-color;
-  padding: 20px;
-  border-radius: 10px;
-  min-width: 140px;
-  text-align: center;
-  user-select: none;
+.icon {
+  height: 50px;
+  padding: 3px;
+  background-color: $tertiary-color;
+  border-radius: 5px;
   transition: all 0.3s;
-
-  &:first-child {
-    margin-left: 10px;
-  }
 
   &:hover {
     transform: translateY(-2px);
-    background: #b097df;
   }
 }
 
 .skill-name {
-  align-items: center;
-  justify-content: space-evenly;
-  display: flex;
-}
-
-.icon {
-  height: 30px;
-}
-
-.skill-line {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.skill-category {
-  padding: 5px 10px 0 10px;
+  text-align: center;
   margin: 0;
+  padding-bottom: 10px;
 }
 
 .skill-categories {
-  margin-top: 10px;
+  margin-top: 20px;
+  gap: 10px;
+  align-items: center;
+  flex-direction: column;
+  display: flex
+;
+  * {
+    user-select: none;
+  }
 }
 
 /* Interests Section */
@@ -849,18 +838,19 @@ h1 {
   overflow-x: scroll;
   overflow-y: visible;
   padding: 25px 15px 15px 15px;
-}
 
-.interest-list::-webkit-scrollbar {
-  width: 12px;
-}
+  &::-webkit-scrollbar {
+    height: 10px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: $light-color;
+    border-radius: 15px;
+  }
 
-.interest-list::-webkit-scrollbar-thumb {
-  background-color: $light-color;
-  border-radius: 15px;
-}
-.interest-list::-webkit-scrollbar-thumb:active {
-  background-color: darken($color: #eeeeee, $amount: 10);
+  &::-webkit-scrollbar-thumb:active {
+    background-color: darken($color: #eeeeee, $amount: 10);
+  }
 }
 
 .interest-item{

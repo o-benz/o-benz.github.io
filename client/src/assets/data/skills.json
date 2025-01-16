@@ -25,10 +25,10 @@
         { "name": "SAP", "level": "Advanced", "icon": "../../assets/skills/SAP.png" }
     ],
     "Programming Languages": [
-        { "name": "Python", "level": "Advanced", "icon": "../../assets/skills/Python.png" },
-        { "name": "C/C++", "level": "Advanced", "icon": "../../assets/skills/CC++.png" },
         { "name": "JS/TS", "level": "Advanced", "icon": "../../assets/skills/JSTS.png" },
         { "name": "HTML/CSS", "level": "Advanced", "icon": "../../assets/skills/HTMLCSS.png" },
+        { "name": "Python", "level": "Advanced", "icon": "../../assets/skills/Python.png" },
+        { "name": "C/C++", "level": "Advanced", "icon": "../../assets/skills/CC++.png" },
         { "name": "SQL", "level": "Advanced", "icon": "../../assets/skills/SQL.png" },
         { "name": "R", "level": "Intermediate", "icon": "../../assets/skills/R.png" },
         { "name": "MATLAB", "level": "Intermediate", "icon": "../../assets/skills/MATLAB.png" }

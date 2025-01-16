@@ -114,15 +114,11 @@
     </div>
     
     <div class="skill-categories">
-      <div *ngFor="let category of skills | keyvalue">
-        <h3 class="skill-category">{{ category.key }}</h3>
+      <div class="skill-category" *ngFor="let category of skills | keyvalue">
+        <h3 class="skill-name">{{ category.key }}</h3>
         <div class="skill-list">
-          <div class="skill-item" *ngFor="let skill of category.value">
-            <div class="skill-line">
-              <h4>{{ skill.name }}</h4>
-              <img [src]="skill.icon" alt="Icon" class="icon">
-            </div>
-            <p>{{ skill.level }}</p>
+          <div *ngFor="let skill of category.value">
+            <img [src]="skill.icon" [title]="skill.name" [alt]="skill.name" class="icon">
           </div>
         </div>
       </div>

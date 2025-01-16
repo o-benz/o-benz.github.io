@@ -1,17 +1,36 @@
-[
-    { "name": "Python", "level": "Advanced", "icon": "../../assets/skills/Python.png" },
-    { "name": "C/C++", "level": "Advanced", "icon": "../../assets/skills/CC++.png" },
-    { "name": "SQL", "level": "Advanced", "icon": "../../assets/skills/SQL.png" },
-    { "name": "JS/TS", "level": "Advanced", "icon": "../../assets/skills/JSTS.png" },
-    { "name": "HTML", "level": "Advanced", "icon": "../../assets/skills/HTML.png" },
-    { "name": "CSS/SCSS", "level": "Advanced", "icon": "../../assets/skills/SCSSCSS.png" },
-    { "name": "R", "level": "Advanced", "icon": "../../assets/skills/R.png" },
-    { "name": "Angular", "level": "Advanced", "icon": "../../assets/skills/AngularJS.png" },
-    { "name": "Node.js", "level": "Advanced", "icon": "../../assets/skills/NodeJS.png" },
-    { "name": "MongoDB", "level": "Intermediate", "icon": "../../assets/skills/MongoDB.png" },
-    { "name": "AWS", "level": "Advanced", "icon": "../../assets/skills/AWS.png" },
-    { "name": "Snowflake", "level": "Advanced", "icon": "../../assets/skills/Snowflake.png" },
-    { "name": "Databricks", "level": "Intermediate", "icon": "../../assets/skills/Databricks.png" },
-    { "name": "Power BI", "level": "Intermediate", "icon": "../../assets/skills/PowerBI.png" },
-    { "name": "Excel", "level": "Advanced", "icon": "../../assets/skills/Excel.png" }
-]
+{
+    "Development Tools": [
+        { "name": "Git", "level": "Advanced", "icon": "../../assets/skills/Git.png" },
+        { "name": "Docker", "level": "Intermediate", "icon": "../../assets/skills/Docker.png" },
+        { "name": "Jenkins", "level": "Advanced", "icon": "../../assets/skills/Jenkins.png" },
+        { "name": "Angular", "level": "Advanced", "icon": "../../assets/skills/Angular.png" },
+        { "name": "React", "level": "Advanced", "icon": "../../assets/skills/React.png" },
+        { "name": ".NET", "level": "Intermediate", "icon": "../../assets/skills/NET.png" },
+        { "name": "NodeJS", "level": "Advanced", "icon": "../../assets/skills/NodeJS.png" }
+    ],
+    "Cloud/Data Technologies": [
+        { "name": "S3", "level": "Advanced", "icon": "../../assets/skills/S3.png" },
+        { "name": "Glue", "level": "Advanced", "icon": "../../assets/skills/Glue.png" },
+        { "name": "CloudWatch", "level": "Advanced", "icon": "../../assets/skills/CloudWatch.png" },
+        { "name": "Snowflake", "level": "Advanced", "icon": "../../assets/skills/Snowflake.png" },
+        { "name": "Databricks", "level": "Intermediate", "icon": "../../assets/skills/Databricks.png" },
+        { "name": "MongoDB", "level": "Intermediate", "icon": "../../assets/skills/MongoDB.png" }
+    ],
+    "BI/Enterprise Tools": [
+        { "name": "Power BI", "level": "Advanced", "icon": "../../assets/skills/PowerBI.png" },
+        { "name": "Tableau", "level": "Intermediate", "icon": "../../assets/skills/Tableau.png" },
+        { "name": "Excel", "level": "Advanced", "icon": "../../assets/skills/Excel.png" },
+        { "name": "PowerPoint", "level": "Advanced", "icon": "../../assets/skills/PowerPoint.png" },
+        { "name": "Jira", "level": "Advanced", "icon": "../../assets/skills/Jira.png" },
+        { "name": "SAP", "level": "Advanced", "icon": "../../assets/skills/SAP.png" }
+    ],
+    "Programming Languages": [
+        { "name": "JS/TS", "level": "Advanced", "icon": "../../assets/skills/JSTS.png" },
+        { "name": "HTML/CSS", "level": "Advanced", "icon": "../../assets/skills/HTMLCSS.png" },
+        { "name": "Python", "level": "Advanced", "icon": "../../assets/skills/Python.png" },
+        { "name": "C/C++", "level": "Advanced", "icon": "../../assets/skills/CC++.png" },
+        { "name": "SQL", "level": "Advanced", "icon": "../../assets/skills/SQL.png" },
+        { "name": "R", "level": "Intermediate", "icon": "../../assets/skills/R.png" },
+        { "name": "MATLAB", "level": "Intermediate", "icon": "../../assets/skills/MATLAB.png" }
+    ]
+}

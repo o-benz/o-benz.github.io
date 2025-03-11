@@ -15,14 +15,24 @@
         "link": "https://github.com/o-benz/ROBO-QUEST"
     },
     {
-        "title": "Mealer",
-        "logo": "../../assets/projects/Mealer.png",
-        "link": "https://github.com/o-benz/Mealer"
+        "title": "D&N",
+        "logo": "../../assets/projects/D&N.png",
+        "link": "https://DrissAndNawal.github.io/"
+    },
+    {
+        "title": "BeyondGPA",
+        "logo": "../../assets/projects/BeyondGPA.png",
+        "link": "https://BeyondGPA.github.io/"
     },
     {
         "title": "SmartyShowdown",
         "logo": "../../assets/projects/SmartyShowdown.png",
         "link": "https://github.com/o-benz/SmartyShowdown"
+    },
+    {
+        "title": "Mealer",
+        "logo": "../../assets/projects/Mealer.png",
+        "link": "https://github.com/o-benz/Mealer"
     },
     {
         "title": "The Polynator",
@@ -33,10 +43,5 @@
         "title": "OverEngineered",
         "logo": "../../assets/projects/OverEngineered.png",
         "link": "https://github.com/o-benz/OverEngineered"
-    },
-    {
-        "title": "D&N",
-        "logo": "../../assets/projects/wedding.png",
-        "link": "https://drissandnawal.github.io/"
     }
 ]

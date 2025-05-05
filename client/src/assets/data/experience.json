@@ -1,7 +1,17 @@
 [
     {
+        "titles": ["Software Engineer (Intern)"],
+        "company": "Shopify",
+        "durations": ["May 2025 – Aug 2025"],
+        "BulletPoints": [
+            "• Shipped improvements to Shopify’s automation builder, reducing merchant setup time for multi-step workflows.",
+            "• Optimized customer segmentation queries and background job performance, cutting evaluation latency by nearly 40% on campaigns targeting 100M+ profiles.",
+            "• Extended event-driven triggers (e.g., order placed, cart abandoned) into marketing flows, powering a system that sends over 4.2B emails yearly."
+        ]
+    },
+    {
         "titles": ["Software Developer (Capstone Intern)"],
-        "company": "CAE Inc.",
+        "company": "CAE",
         "durations": ["Jan 2025 – Apr 2025"],
         "BulletPoints": [
             "• Build a self-service web portal to automate software asset creation and lifecycle processes, integrating REST APIs.",

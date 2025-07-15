@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit, AfterViewInit, ElementRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { collapseExpandAnimation } from 'src/assets/animations/CollapseExpand';
@@ -11,11 +11,11 @@ import { collapseExpandAnimation } from 'src/assets/animations/CollapseExpand';
   imports: [CommonModule],
   animations: [collapseExpandAnimation]
 })
-export class MainPageComponent implements OnInit {
-  cardStyles = {};
-  isFlipped = false;
-  isFlipping = false;
+export class MainPageComponent implements OnInit, AfterViewInit {
+  emailCopied = false;
   isDarkMode = false;
+  mouseX = 0;
+  mouseY = 0;
 
   isEducationCollapsed = true;
   isExperienceCollapsed = true;
@@ -29,7 +29,12 @@ export class MainPageComponent implements OnInit {
   skills: any[] = [];
   interests: any[] = [];
 
-  constructor(private http: HttpClient) {}
+  private observer!: IntersectionObserver;
+
+  constructor(
+    private http: HttpClient,
+    private elementRef: ElementRef
+  ) {}
 
   ngOnInit(): void {
     this.loadData('degrees', 'assets/data/education.json');
@@ -37,6 +42,32 @@ export class MainPageComponent implements OnInit {
     this.loadData('projects', 'assets/data/projects.json');
     this.loadData('skills', 'assets/data/skills.json');
     this.loadData('interests', 'assets/data/interests.json');
+  }
+
+  ngAfterViewInit(): void {
+    this.setupIntersectionObserver();
+  }
+
+  private setupIntersectionObserver(): void {
+    const options = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    this.observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, options);
+
+    // Observe all sections and elements with animate-on-scroll class
+    const sections = this.elementRef.nativeElement.querySelectorAll('section');
+    const animatedElements = this.elementRef.nativeElement.querySelectorAll('.animate-on-scroll');
+    
+    sections.forEach((section: Element) => this.observer.observe(section));
+    animatedElements.forEach((element: Element) => this.observer.observe(element));
   }
 
   private loadData(key: string, url: string): void {
@@ -47,22 +78,29 @@ export class MainPageComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   onResize() {
-    this.resetCardPosition();
+    // Handle any resize-specific logic
   }
 
   onMouseMove(event: MouseEvent): void {
-    if (this.isFlipping) return;
-    const card = document.querySelector('.card') as HTMLElement;
-    const cardRect = card.getBoundingClientRect();
-    const centerX = cardRect.left + cardRect.width / 2;
-    const centerY = cardRect.top + cardRect.height / 2;
+    this.mouseX = event.clientX;
+    this.mouseY = event.clientY;
+    
+    // Update CSS variables for mouse position
+    document.documentElement.style.setProperty('--mouse-x', `${event.clientX}px`);
+    document.documentElement.style.setProperty('--mouse-y', `${event.clientY}px`);
+  }
 
-    const rotateX = -(event.clientY - centerY) / 20;
-    const rotateY = (event.clientX - centerX) / 20;
-
-    this.cardStyles = {
-      transform: `rotateX(${rotateX}deg) rotateY(${rotateY + (this.isFlipped ? 180 : 0)}deg)`
-    };
+  async copyEmail(): Promise<void> {
+    try {
+      await navigator.clipboard.writeText('omar.benzekri.2003@gmail.com');
+      this.emailCopied = true;
+      
+      setTimeout(() => {
+        this.emailCopied = false;
+      }, 2000);
+    } catch (err) {
+      console.error('Failed to copy email:', err);
+    }
   }
 
   toggleTheme() {
@@ -80,28 +118,6 @@ export class MainPageComponent implements OnInit {
     if (educationSection) {
       educationSection.scrollIntoView({ behavior: 'smooth' });
     }
-  }
-
-  resetCardPosition(): void {
-    this.cardStyles = {
-      transform: `rotateX(0) rotateY(${this.isFlipped ? 180 : 0}deg)`
-    };
-  }
-
-  async flipCard(): Promise<void> {
-    this.isFlipped = !this.isFlipped;
-    this.isFlipping = true;
-    this.cardStyles = {
-      transform: `rotateX(0) rotateY(${this.isFlipped ? 180 : 0}deg)`
-    };
-
-    if (this.isFlipped) {
-      await navigator.clipboard.writeText('omar.benzekri.2003@gmail.com');
-    }
-    
-    setTimeout(() => {
-      this.isFlipping = false;
-    }, 600);
   }
 
   toggleCollapse(section: string) {

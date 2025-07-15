@@ -1,5 +1,15 @@
 [
     {
+        "title": "PolyLoop",
+        "logo": "../../assets/projects/PolyLoop.png",
+        "link": "https://polyloop.ca/"
+    },
+    {
+        "title": "BeyondGPA",
+        "logo": "../../assets/projects/BeyondGPA.png",
+        "link": "https://BeyondGPA.github.io/"
+    },
+    {
         "title": "Geppetto",
         "logo": "../../assets/projects/Geppetto.png",
         "link": "https://github.com/o-benz/Geppetto"
@@ -18,11 +28,6 @@
         "title": "D&N",
         "logo": "../../assets/projects/D&N.png",
         "link": "https://DrissAndNawal.github.io/"
-    },
-    {
-        "title": "BeyondGPA",
-        "logo": "../../assets/projects/BeyondGPA.png",
-        "link": "https://BeyondGPA.github.io/"
     },
     {
         "title": "SmartyShowdown",

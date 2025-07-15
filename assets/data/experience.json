@@ -4,19 +4,18 @@
         "company": "Shopify",
         "durations": ["May 2025 – Aug 2025"],
         "BulletPoints": [
-            "• Shipped improvements to Shopify’s automation builder, reducing merchant setup time for multi-step workflows.",
-            "• Optimized customer segmentation queries and background job performance, cutting evaluation latency by nearly 40% on campaigns targeting 100M+ profiles.",
-            "• Extended event-driven triggers (e.g., order placed, cart abandoned) into marketing flows, powering a system that sends over 4.2B emails yearly."
+            "• Champion a bot suppression initiative, backfilling historical data and blocking over 12M flagged profiles from email targeting to improve engagement rates across campaigns by 18%.",
+            "• Ship AI-powered email template generation by integrating product metadata and merchant tone to enable 20K+ users to generate campaign drafts automatically.",
+            "• Resolve high-priority bugs in production pipelines and background jobs, directly increasing platform stability."
         ]
     },
     {
-        "titles": ["Software Developer (Capstone Intern)"],
+        "titles": ["Software Developer (Capstone Contract)"],
         "company": "CAE",
         "durations": ["Jan 2025 – Apr 2025"],
         "BulletPoints": [
-            "• Build a self-service web portal to automate software asset creation and lifecycle processes, integrating REST APIs.",
-            "• Design DevOps pipelines/workflows using AMT, Azure and GitHub Actions, reducing manual setup time by 60%.",
-            "• Collaborate in an Agile environment with senior developers to automate migration processes for legacy assets."
+            "• Build and deploy an internal self-service web portal to automate software asset creation and lifecycle processes.",
+            "• Design DevOps pipelines/workflows to reduce manual developer setup time by 60%."
         ]
     },
     {
@@ -24,9 +23,9 @@
         "company": "National Bank of Canada",
         "durations": ["Sep 2024 – Apr 2025", "May 2024 – Aug 2024"],
         "BulletPoints": [
-            "• Manage real-time, near real-time or batch data ETL ingestion processes through MFT, AWS and Kafka, ensuring availability and governance of certified data across analytical platforms utilizing proficiency in Python and SQL.",
-            "• Lead Agile ceremonies as Scrum Master, drive efficient CI/CD practices through DevOps principles, and train a new team member to full operational capacity within two weeks. Resolve 93% of data flow incidents within SLA.",
-            "• Engineer innovative solutions to streamline data ingestion workflows using Snowflake and Databricks, reducing processing times, volumes, and associated costs by nearly 30% while upholding data quality standards."
+            "• Manage ETL ingestion processes, ensuring availability and governance of certified data across platforms, and resolve 96% of data flow incidents within SLA.",
+            "• Lead Agile ceremonies as Scrum Master, and drive efficient CI/CD practices through DevOps principles.",
+            "• Engineer solutions to streamline workflows, reducing processing times, volumes, and associated costs by 30%."
         ]
     },
     {
@@ -45,8 +44,7 @@
         "durations": ["Jan 2023 - Dec 2023"],
         "BulletPoints": [
             "• Conduct weekly in-person lab sessions for over 40 students to reinforce key concepts in C++ and OOP.",
-            "• Grade assignments, quizzes and exams, providing detailed feedback to students on their performance.",
-            "• Provide code debugging and troubleshooting assistance to students during and outside of office hours."
+            "• Grade assignments, quizzes and exams, providing detailed feedback to students on their performance."
         ]
     },
     {
@@ -55,8 +53,7 @@
         "durations": ["Sep 2020 - Dec 2024"],
         "BulletPoints": [
             "• Teach the basics of programming and computer science to a group of 30 young students.",
-            "• Design a fun and complete curriculum to foster curiosity and interest in a software-related career.",
-            "• Develop interactive coding projects and exercises tailored to enhance problem-solving skills and creativity."
+            "• Design a fun and complete curriculum to foster curiosity and interest in a software-related career."
         ]
     }
 ]

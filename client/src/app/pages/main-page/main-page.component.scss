@@ -22,6 +22,7 @@ h2 {
   background: var(--gradient-iridescent);
   background-size: 300% 300%;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: iridescent 4s ease infinite;
   
@@ -147,7 +148,7 @@ h2 {
   align-items: center;
   height: 100vh;
   min-height: 600px;
-  background: var(--gradient-primary);
+  background: transparent; // Changed to transparent to show galaxy
   overflow: hidden;
   
   &::before {
@@ -158,9 +159,10 @@ h2 {
     right: 0;
     bottom: 0;
     background: radial-gradient(circle at 50% 50%, 
-      rgba(var(--accent-rgb), 0.1) 0%, 
-      transparent 70%);
+      rgba(var(--accent-rgb), 0.05) 0%, 
+      transparent 70%); // Reduced opacity to let galaxy show through
     pointer-events: none;
+    z-index: 1;
   }
 }
 
@@ -206,9 +208,9 @@ h2 {
     position: relative;
     color: var(--neutral-100);
     text-shadow: 
-      0 0 10px rgba(var(--accent-rgb), 0.5),
-      0 0 20px rgba(var(--accent-rgb), 0.3),
-      0 0 30px rgba(var(--accent-rgb), 0.1);
+      0 0 20px rgba(var(--accent-rgb), 0.6),
+      0 0 40px rgba(var(--accent-rgb), 0.4),
+      0 0 60px rgba(var(--accent-rgb), 0.2);
     animation: glow-pulse 3s ease-in-out infinite;
     transform: 
       translateX(calc((var(--mouse-x, 50vw) - 50vw) * 0.02))
@@ -238,9 +240,9 @@ h2 {
         translateY(calc((var(--mouse-y, 50vh) - 50vh) * 0.04 - 5px))
         scale(1.02);
       text-shadow: 
-        0 0 15px rgba(var(--accent-rgb), 0.7),
-        0 0 30px rgba(var(--accent-rgb), 0.5),
-        0 0 45px rgba(var(--accent-rgb), 0.3);
+        0 0 25px rgba(var(--accent-rgb), 0.8),
+        0 0 50px rgba(var(--accent-rgb), 0.6),
+        0 0 75px rgba(var(--accent-rgb), 0.4);
     }
   }
 }
@@ -323,6 +325,29 @@ h2 {
   50% { transform: translateY(-5px); }
 }
 
+@keyframes subtitle-glitch {
+  0%, 100% { 
+    transform: translateX(0) scale(1);
+    filter: brightness(1);
+  }
+  20% { 
+    transform: translateX(-2px) scale(1.02);
+    filter: brightness(1.2);
+  }
+  40% { 
+    transform: translateX(2px) scale(0.98);
+    filter: brightness(0.9);
+  }
+  60% { 
+    transform: translateX(-1px) scale(1.01);
+    filter: brightness(1.1);
+  }
+  80% { 
+    transform: translateX(1px) scale(0.99);
+    filter: brightness(1);
+  }
+}
+
 // Hero subtitle
 .hero-subtitle {
   display: flex;
@@ -340,21 +365,30 @@ h2 {
   .subtitle-text {
     cursor: default;
     position: relative;
+    font-family: var(--font-mono);
+    letter-spacing: 0.05em;
+    transition: all var(--transition-fast);
     
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -2px;
-      left: 0;
-      width: 0;
-      height: 1px;
-      background: var(--accent);
-      transition: width var(--transition-base);
+    &.decrypt-text {
+      display: inline-block;
+      text-align: center;
+      
+      // Specific min-widths to prevent layout shift
+      &:nth-child(1) { min-width: 120px; } // Web Designer
+      &:nth-child(3) { min-width: 160px; } // Computer Engineer  
+      &:nth-child(5) { min-width: 90px; }  // CSS King
+      
+      // Glitch effect on hover
+      &:hover {
+        animation: subtitle-glitch 0.3s ease-in-out;
+        color: var(--accent);
+        text-shadow: 
+          0 0 10px rgba(var(--accent-rgb), 0.5),
+          0 0 20px rgba(var(--accent-rgb), 0.3);
+      }
     }
     
-    &:hover::after {
-      width: 100%;
-    }
+    // Removed underline effect - the decrypt animation is enough!
   }
   
   .subtitle-divider {
@@ -364,14 +398,13 @@ h2 {
   }
   
   .crown-title {
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-    color: var(--secondary);
+    color: var(--secondary) !important; // Keep gold color for CSS King
     
-    .crown-icon {
-      font-size: 1.2em;
-      animation: bounce 2s ease-in-out infinite;
+    &:hover {
+      color: var(--secondary) !important;
+      text-shadow: 
+        0 0 10px rgba(var(--secondary-rgb), 0.6),
+        0 0 20px rgba(var(--secondary-rgb), 0.4) !important;
     }
   }
 }
@@ -607,7 +640,7 @@ h2 {
 /* Education Section - Restored Original Layout */
 .education {
   padding: 15px 0;
-  background: linear-gradient(180deg, var(--primary-dark) 0%, var(--primary) 100%);
+  background: linear-gradient(180deg, rgba(5, 5, 7, 0.9) 0%, rgba(10, 10, 15, 0.9) 100%);
   position: relative;
   z-index: 1;
 }
@@ -777,7 +810,7 @@ h2 {
   }
 
   .textline {
-    font-size: 0.2em;
+    font-size: 0.6em;
   }
 
   .student-name {
@@ -823,7 +856,7 @@ h2 {
 /* Experience Section - Restored Original Layout */
 .experience {
   padding: 15px 0;
-  background: linear-gradient(180deg, var(--primary) 0%, var(--primary-light) 100%);
+  background: linear-gradient(180deg, rgba(10, 10, 15, 0.9) 0%, rgba(15, 15, 20, 0.9) 100%);
   position: relative;
   z-index: 2;
 }
@@ -901,7 +934,7 @@ h2 {
 
 .projects {
   padding: 15px 0;
-  background: linear-gradient(180deg, var(--primary-light) 0%, var(--primary) 100%);
+  background: linear-gradient(180deg, rgba(15, 15, 20, 0.9) 0%, rgba(10, 10, 15, 0.9) 100%);
   color: var(--neutral-100);
   position: relative;
   z-index: 3;
@@ -992,7 +1025,7 @@ h2 {
 /* Skills Section - Restored Original Layout */
 .skills {
   padding: 15px 0;
-  background: linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%);
+  background: linear-gradient(180deg, rgba(10, 10, 15, 0.9) 0%, rgba(5, 5, 7, 0.9) 100%);
   position: relative;
   z-index: 4;
 }
@@ -1053,7 +1086,7 @@ h2 {
 
 /* Interests Section - Restored Original Layout */
 .interests {
-  background: linear-gradient(180deg, var(--primary-dark) 0%, var(--primary) 100%);
+  background: linear-gradient(180deg, rgba(5, 5, 7, 0.9) 0%, rgba(10, 10, 15, 0.9) 100%);
   padding: 15px 0;
   position: relative;
   z-index: 5;
@@ -1148,7 +1181,17 @@ h2 {
 
 
 
-/* Stars - Enhanced with color variations */
+/* Galaxy Background */
+app-galaxy-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+/* Stars - Enhanced with color variations (kept for reference, not used) */
 .stars-container {
   position: absolute;
   height: 100%;
@@ -1336,7 +1379,7 @@ $shadows-big: multiple-box-shadow(100, 'colored');
 }
 
 .contact {
-  background: linear-gradient(180deg, var(--primary-dark) 0%, var(--primary) 100%);
+  background: linear-gradient(180deg, rgba(5, 5, 7, 0.95) 0%, rgba(10, 10, 15, 0.95) 100%);
   padding: 15px 0;
   position: relative;
   z-index: 6;

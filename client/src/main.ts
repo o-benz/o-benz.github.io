@@ -6,9 +6,8 @@ import { AppComponent } from '@app/components/app/app.component';
 import { MainPageComponent } from '@app/pages/main-page/main-page.component';
 
 const routes: Routes = [
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
-    { path: 'home', component: MainPageComponent },
-    { path: '**', redirectTo: '/home' },
+    { path: '', component: MainPageComponent, pathMatch: 'full' },
+    { path: '**', redirectTo: '' },
 ];
 
 bootstrapApplication(AppComponent, {

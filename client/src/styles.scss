@@ -2,18 +2,18 @@
 
 // CSS Custom Properties for dynamic theming
 :root {
-  // Core colors - Deep space theme
-  --primary: #0A0E27;
-  --primary-light: #141933;
-  --primary-dark: #050714;
+  // Core colors - Deep space theme (neutral dark)
+  --primary: #0A0A0F;     // Almost black with slight cool tone
+  --primary-light: #141418;  // Lighter charcoal
+  --primary-dark: #050507;   // Deep black
   
-  // Accent colors - Electric & vibrant
-  --accent: #00D9FF;
-  --accent-rgb: 0, 217, 255;
-  --highlight: #FF006E;
-  --highlight-rgb: 255, 0, 110;
-  --secondary: #FFBE0B;
-  --secondary-rgb: 255, 190, 11;
+  // Accent colors - Galaxy-inspired palette
+  --accent: #7B68EE;  // Medium Slate Blue (softer, matches galaxy)
+  --accent-rgb: 123, 104, 238;
+  --highlight: #FF6B9D;  // Softer pink that complements purple
+  --highlight-rgb: 255, 107, 157;
+  --secondary: #FFE66D;  // Soft gold/yellow for stars
+  --secondary-rgb: 255, 230, 109;
   
   // Neutral colors
   --neutral-100: #F7F7F7;
@@ -32,12 +32,12 @@
   --gradient-accent: linear-gradient(var(--gradient-angle), var(--accent) 0%, var(--highlight) 50%, var(--secondary) 100%);
   --gradient-iridescent: linear-gradient(
     var(--gradient-angle),
-    #00D9FF 0%,
-    #FF006E 20%,
-    #FFBE0B 40%,
-    #00D9FF 60%,
-    #FF006E 80%,
-    #FFBE0B 100%
+    #7B68EE 0%,
+    #FF6B9D 20%,
+    #FFE66D 40%,
+    #7B68EE 60%,
+    #FF6B9D 80%,
+    #FFE66D 100%
   );
   
   // Typography

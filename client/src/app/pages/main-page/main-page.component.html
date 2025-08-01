@@ -1,11 +1,19 @@
 <div class="portfolio-container" (mousemove)="onMouseMove($event)">
   <!-- Hero Section -->
   <section class="hero" id="hero">
-    <div class="stars-container">
-      <div id='stars'></div>
-      <div id='stars2'></div>
-      <div id='stars3'></div>
-    </div>
+    <!-- Galaxy Background -->
+    <app-galaxy-background 
+      [focal]="[0.5, 0.5]"
+      [starSpeed]="0.3"
+      [density]="0.5"
+      [hueShift]="250"
+      [glowIntensity]="0.2"
+      [saturation]="0.4"
+      [mouseInteraction]="false"
+      [twinkleIntensity]="0.2"
+      [rotationSpeed]="0.03"
+      [transparent]="false">
+    </app-galaxy-background>
     
     <!-- 3D Layered Hero Content -->
     <div class="hero-3d-scene">
@@ -18,12 +26,22 @@
         </div>
         
         <div class="hero-subtitle">
-          <span class="subtitle-text">Web Designer</span>
+          <span class="subtitle-text decrypt-text" 
+                (mouseenter)="onSubtitleHover(0)"
+                [attr.data-text]="subtitleTexts[0]">
+            {{ decryptedSubtitles[0] || subtitleTexts[0] }}
+          </span>
           <span class="subtitle-divider">•</span>
-          <span class="subtitle-text">Computer Engineer</span>
+          <span class="subtitle-text decrypt-text" 
+                (mouseenter)="onSubtitleHover(1)"
+                [attr.data-text]="subtitleTexts[1]">
+            {{ decryptedSubtitles[1] || subtitleTexts[1] }}
+          </span>
           <span class="subtitle-divider">•</span>
-          <span class="subtitle-text crown-title">
-            CSS King
+          <span class="subtitle-text crown-title decrypt-text" 
+                (mouseenter)="onSubtitleHover(2)"
+                [attr.data-text]="subtitleTexts[2]">
+            {{ decryptedSubtitles[2] || subtitleTexts[2] }}
           </span>
         </div>
         

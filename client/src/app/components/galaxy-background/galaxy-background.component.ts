@@ -222,7 +222,11 @@ export class GalaxyBackgroundComponent implements AfterViewInit, OnDestroy {
   private startTime = Date.now();
 
   ngAfterViewInit(): void {
-    this.initWebGL();
+    // Delay initialization slightly to ensure DOM is ready
+    // and prevent conflict with other animations
+    setTimeout(() => {
+      this.initWebGL();
+    }, 100);
   }
 
   ngOnDestroy(): void {

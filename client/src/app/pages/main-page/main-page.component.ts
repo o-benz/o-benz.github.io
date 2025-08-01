@@ -164,10 +164,41 @@ export class MainPageComponent implements OnInit, AfterViewInit {
   // Decrypt animation for subtitles
   private startDecryptAnimation(): void {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*<>[]{}()';
-    const speed = 40;
-    const iterations = 12;
+    const isMobile = window.innerWidth <= 768;
+    const speed = isMobile ? 50 : 40; // Slightly slower on mobile
+    const iterations = isMobile ? 10 : 12; // Slightly fewer iterations on mobile
     
-    // Start with all text scrambled
+    // Use requestAnimationFrame for better performance
+    let startTime: number;
+    const animateDecrypt = (timestamp: number) => {
+      if (!startTime) startTime = timestamp;
+      const elapsed = timestamp - startTime;
+      
+      this.subtitleTexts.forEach((text, index) => {
+        const delay = 800 + (index * 400);
+        if (elapsed < delay) return;
+        
+        const progress = Math.min((elapsed - delay) / (iterations * speed), 1);
+        const revealPosition = Math.floor(text.length * progress);
+        
+        this.decryptedSubtitles[index] = text
+          .split('')
+          .map((char, charIndex) => {
+            if (char === ' ') return ' ';
+            if (charIndex < revealPosition) return text[charIndex];
+            return characters[Math.floor(Math.random() * characters.length)];
+          })
+          .join('');
+      });
+      
+      // Continue animation if not complete
+      const lastDelay = 800 + ((this.subtitleTexts.length - 1) * 400);
+      if (elapsed < lastDelay + (iterations * speed)) {
+        requestAnimationFrame(animateDecrypt);
+      }
+    };
+    
+    // Start with scrambled text
     this.subtitleTexts.forEach((text, index) => {
       this.decryptedSubtitles[index] = text
         .split('')
@@ -175,38 +206,10 @@ export class MainPageComponent implements OnInit, AfterViewInit {
         .join('');
     });
     
-    // Decrypt each subtitle with stagger
-    this.subtitleTexts.forEach((text, index) => {
-      setTimeout(() => {
-        let currentIteration = 0;
-        const interval = setInterval(() => {
-          this.decryptedSubtitles[index] = text
-            .split('')
-            .map((char, charIndex) => {
-              if (char === ' ') return ' ';
-              
-              // Reveal characters progressively from left to right
-              const progress = currentIteration / iterations;
-              const revealPosition = Math.floor(text.length * progress);
-              
-              if (charIndex < revealPosition) {
-                return text[charIndex];
-              }
-              
-              // Return random character for unrevealed positions
-              return characters[Math.floor(Math.random() * characters.length)];
-            })
-            .join('');
-          
-          currentIteration++;
-          
-          if (currentIteration > iterations) {
-            this.decryptedSubtitles[index] = text;
-            clearInterval(interval);
-          }
-        }, speed);
-      }, 800 + (index * 400)); // Delay start and stagger
-    });
+    // Start animation after a tiny delay to not block initial render
+    setTimeout(() => {
+      requestAnimationFrame(animateDecrypt);
+    }, 50);
   }
 
   onSubtitleHover(index: number): void {
@@ -216,27 +219,35 @@ export class MainPageComponent implements OnInit, AfterViewInit {
     let currentIteration = 0;
     const maxIterations = 8;
     
-    const interval = setInterval(() => {
-      this.decryptedSubtitles[index] = text
-        .split('')
-        .map((char, charIndex) => {
-          if (char === ' ') return ' ';
-          
-          const progress = currentIteration / maxIterations;
-          if (charIndex < text.length * progress) {
-            return text[charIndex];
-          }
-          
-          return characters[Math.floor(Math.random() * characters.length)];
-        })
-        .join('');
-      
-      currentIteration++;
-      
-      if (currentIteration > maxIterations) {
-        this.decryptedSubtitles[index] = text;
-        clearInterval(interval);
+    // Use requestAnimationFrame for smoother animation
+    let lastTime = 0;
+    const animate = (timestamp: number) => {
+      if (timestamp - lastTime >= speed) {
+        this.decryptedSubtitles[index] = text
+          .split('')
+          .map((char, charIndex) => {
+            if (char === ' ') return ' ';
+            
+            const progress = currentIteration / maxIterations;
+            if (charIndex < text.length * progress) {
+              return text[charIndex];
+            }
+            
+            return characters[Math.floor(Math.random() * characters.length)];
+          })
+          .join('');
+        
+        currentIteration++;
+        lastTime = timestamp;
       }
-    }, speed);
+      
+      if (currentIteration <= maxIterations) {
+        requestAnimationFrame(animate);
+      } else {
+        this.decryptedSubtitles[index] = text;
+      }
+    };
+    
+    requestAnimationFrame(animate);
   }
 }

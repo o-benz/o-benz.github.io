@@ -3,13 +3,14 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { collapseExpandAnimation } from 'src/assets/animations/CollapseExpand';
 import { GalaxyBackgroundComponent } from '../../components/galaxy-background/galaxy-background.component';
+import { ClickSparkDirective } from '../../directives/click-spark.directive';
 
 @Component({
   selector: 'app-main-page',
   standalone: true,
   templateUrl: './main-page.component.html',
   styleUrls: ['./main-page.component.scss'],
-  imports: [CommonModule, GalaxyBackgroundComponent],
+  imports: [CommonModule, GalaxyBackgroundComponent, ClickSparkDirective],
   animations: [collapseExpandAnimation]
 })
 export class MainPageComponent implements OnInit, AfterViewInit {

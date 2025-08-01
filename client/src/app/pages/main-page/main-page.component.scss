@@ -650,8 +650,8 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;
-  padding: 15px;
+  gap: 20px;
+  padding: 30px;
   overflow-x: auto;
   
   &::-webkit-scrollbar {
@@ -873,11 +873,14 @@ h2 {
   padding: 20px;
   background: rgba(255, 255, 255, 0.02);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); // Safari support
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-left: 4px solid var(--accent);
   position: relative;
   width: 80%;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateZ(0); // Force GPU acceleration
+  will-change: transform; // Optimize rendering
   border-radius: 15px;
   transition: all var(--transition-base);
 
@@ -1320,6 +1323,18 @@ $shadows-big: multiple-box-shadow(100, 'colored');
   }
 }
 
+/* Fix for mobile backdrop-filter blur issue */
+@media (max-width: 768px) {
+  .timeline-item,
+  .project-content,
+  .skill-category {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    will-change: auto !important;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-title {
     font-size: clamp(2rem, 8vw, 3.5rem);
@@ -1357,7 +1372,7 @@ $shadows-big: multiple-box-shadow(100, 'colored');
   }
   
   .icon {
-    height: 30px !important;
+    height: 40px !important;
   }
   
   .floating-shapes {
@@ -1371,12 +1386,12 @@ $shadows-big: multiple-box-shadow(100, 'colored');
   }
   
   .hero-title {
-    font-size: clamp(1.8rem, 10vw, 3rem);
+    font-size: clamp(2.1rem, 11vw, 3.4rem);
   }
   
-  .hero-subtitle {
-    font-size: 0.85rem;
-  }
+  // .hero-subtitle {
+  //   font-size: 0.85rem;
+  // }
 }
 
 .contact {

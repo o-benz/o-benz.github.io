@@ -1,35 +1,26 @@
-# CSS King 👑
+# CSS Kingdom
 
-## About This Royal Project 👑
+Personal portfolio website featuring modern web design and interactive animations.
 
-This portfolio isn’t just any website; it’s a **single-page masterpiece** crafted by yours truly, the **CSS King**. It features a responsive design, slick animations, and, of course, enough CSS magic to make even the most seasoned web designers bow down. Every section is hand-coded to perfection, and everything is wrapped up in a royal, user-friendly experience.
+## Core Design Elements
 
-### Features Worth Bowing To:
+- **Galaxy Background**: WebGL-powered animated starfield with mouse interaction and particle effects
+- **Decrypting Text Animation**: Job titles reveal through a scrambled text effect on load
+- **Click Spark Effects**: Canvas-based particle bursts on user interaction
+- **3D Layered Hero**: Parallax depth effects responding to mouse movement
+- **Smooth Section Transitions**: Collapse/expand animations with performance-optimized rendering
 
-- **Hero Section**: 🌟  
-  A space-themed section with stars that twinkle in the background of my Card that has a fun responsive 3D movement and a card flip effect revealing the King's title.
+## Technical Implementation
 
-- **Experience Timeline**: 📜  
-  Timeline that chronicles my illustrious career. Every role, every project—all lined up like a royal parade.
+Built with Angular 17, leveraging standalone components and modern TypeScript. The site integrates custom WebGL shaders for the galaxy background, canvas API for interactive effects, and CSS transforms for smooth animations. All effects are optimized for both desktop and mobile performance.
 
-- **Projects Carousel**: 🎠  
-  Personal projects presented in a carousel format.
+## Technologies
 
-- **Technical Skills**: 🛠️  
-  A skill list showcasing my technical prowess (yes CSS is in the list). 
+- Angular 17
+- TypeScript
+- SCSS
+- WebGL/Canvas API
 
-- **Interests Section**: 🎸  
-  A visual feast for the eyes! Pulsing logos that reveal fast paced videos showcasing a bit of my life.
+## License
 
-### Future Enhancements - The CSS Kingdom ⚔️
-
-Coming soon! Behold the most **glorious section** of this portfolio—the **CSS Kingdom**. Expect a mesmerizing display of interactive designs and witty animations, all wrapped in clever SCSS magic. Only the finest elements, fit for a king, will reside here.
-
-### Technologies:
-- **Angular**
-- **SCSS** (naturally)
-- **TypeScript**
-
-## 📄 License  
-
-This project is licensed under the [MIT License](LICENSE), so feel free to use, modify, and share it as you like.  
+This project is licensed under the [MIT License](LICENSE).
